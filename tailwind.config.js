@@ -1,3 +1,5 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -9,6 +11,14 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      fontFamily: {
+        Caprasimo: ["Caprasimo", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
+      },
+    },
+  },
+  variants: {
     extend: {},
   },
   plugins: [],

@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import { Caprasimo } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
 export default function Home() {
   return (
