@@ -4,15 +4,15 @@ export const projects = [
     subtitle: "Shopify Support",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-1.gif",
-    link: "",
+    image: "./bignoisebeer.png",
+    link: "https://bignoisebeer.com",
   },
   {
     title: "StudioArt211",
     subtitle: "Wix/Editor X Build",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-2.gif",
+    image: "./studioart.png",
     link: "https://studioart211.com",
   },
   {
@@ -20,7 +20,8 @@ export const projects = [
     subtitle: "Node.js, MySQL, eCharts, Render",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-3.gif",
+    image: "./candlestick.jpeg",
+    github: "https://github.com/yourgithub/big-noise-beer",
     link: "https://reactbootcamp.com",
   },
   {
@@ -28,22 +29,23 @@ export const projects = [
     subtitle: "Node, JavaScript, NASA API",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./project-4.gif",
-    link: "https://reactbootcamp.com",
+    image: "./marsweather.png",
+    github: "https://github.com/qmpudenz/mars-weather-app",
+    link: "https://qmpudenz.github.io/mars-weather-app/",
   },
 ];
 
 export const testimonials = [
   {
     quote:
-      "The project was to make a calculator inside Zoho Commerce. Although we did not went to develop directly into Zoho, his idea and proposal went excellent in our costs and timing. Quinn delivered good work on this development project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he was very forthcoming that the additional work was outside his area of expertise. I enjoyed working with Quinn and will likely have additional jobs for him in the future.",
+      "&apos;The project was to make a calculator inside Zoho Commerce. Although we did not went to develop directly into Zoho, his idea and proposal went excellent in our costs and timing. Quinn delivered good work on this development project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he was very forthcoming that the additional work was outside his area of expertise. I enjoyed working with Quinn and will likely have additional jobs for him in the future.&apos;",
     image: "",
     name: "Jose A.",
     company: "for Doctor Nugget",
   },
   {
     quote:
-      "Quinn delivered great code and I enjoyed working with him. His communication was excellent and he met all of my deadlines. I had an additional milestone for him and he hopped right on it. I will be hiring him again real soon!",
+      "&apos;Quinn delivered great code and I enjoyed working with him. His communication was excellent and he met all of my deadlines. I had an additional milestone for him and he hopped right on it. I will be hiring him again real soon!&apos;",
     image: "",
     name: "Jenny C.",
     company: "for Big Noise Beer",
@@ -51,13 +53,15 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "JavaScript",
+  "HTML",
   "React",
-  "Next.js",
-  "Node",
-  "MySQL",
-  "Figma",
   "Editor X",
+  "JavaScript",
+  "Next.js",
   "Shopify",
+  "CSS",
+  "Node",
   "WordPress",
+  "Figma",
+  "MySQL",
 ];

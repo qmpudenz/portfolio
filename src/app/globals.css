@@ -25,3 +25,52 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 91vh;
+  top: 9vh;
+}
+
+.module {
+  scroll-snap-align: start;
+  height: 100vh;
+  margin: 0;
+}
+
+.sticky-nav {
+  position: sticky;
+  height: 9vh;
+  top: 0;
+  /* Additional styling as needed */
+}
+
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: gray;
+  border: none;
+}
+
+.carousel-indicators .active-indicator {
+  background: white;
+}
+
+.siema {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+.siema > div {
+  flex: 0 0 auto;
+  width: 100%;
+}
