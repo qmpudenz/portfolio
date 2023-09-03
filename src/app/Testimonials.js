@@ -30,7 +30,7 @@ export default function Testimonials() {
             <div key={testimonial.id} className="p-4 md:w-1/2 w-full">
               <div className="h-auto bg-neutral-900 p-8 rounded">
                 <TerminalIcon className="block w-8 text-gray-500 mb-4" />
-                <p className="leading-relaxed mb-6 text-2xl font-light">
+                <p className="leading-relaxed mb-6 text-lg font-light">
                   {testimonial.quote}
                 </p>
                 <div className="inline-flex items-center">

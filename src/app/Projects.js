@@ -59,7 +59,7 @@ class Projects extends React.Component {
   renderDots() {
     const slides = this.siema ? this.siema.innerElements : [];
     return (
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-black bg-opacity-50 p-2 rounded">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2 bg-black bg-opacity-50 p-2 rounded">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -77,14 +77,14 @@ class Projects extends React.Component {
     const activeProject = projects[this.state.activeSlide];
     return (
       <div
-        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 w-2/3 p-4 h-auto rounded-xl text-2xl"
-        style={{ maxHeight: "33.3%" }}
+        className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-80 w-[60vw] p-4 h-auto rounded-xl text-xl"
+        style={{ maxHeight: "50%" }}
         onMouseEnter={() => this.setState({ showInfo: true })}
         onMouseLeave={() => this.setState({ showInfo: false })}
       >
         <h3 className="text-gray-300">{activeProject.subtitle}</h3>
-        <h2 className="text-white font-bold text-4xl">{activeProject.title}</h2>
-        <p className="text-gray-200 text-l py-4">{activeProject.description}</p>
+        <h2 className="text-white font-bold text-2xl">{activeProject.title}</h2>
+        <p className="text-gray-200 text-m py-4">{activeProject.description}</p>
         <div className="flex space-x-4 mt-4">
           {activeProject.github && (
             <a
@@ -139,7 +139,7 @@ class Projects extends React.Component {
           <div className="siema overflow-hidden">
             <div className="flex justify-center w-full">
               <Image
-                className="w-3/4 rounded-xl"
+                className="w-[65%] rounded-xl"
                 src="/bignoisebeer.png"
                 alt="Slide 1"
                 width={1000} // Example width, adjust as needed
@@ -150,7 +150,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex justify-center w-full">
               <Image
-                className="w-3/4 rounded-xl"
+                className="w-[65%] rounded-xl"
                 src="/studioart.png"
                 alt="Slide 2"
                 width={1000}
@@ -161,7 +161,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex justify-center w-full">
               <Image
-                className="w-3/4 rounded-xl"
+                className="w-[65%] rounded-xl"
                 src="/candlestick.jpeg"
                 alt="Slide 3"
                 width={1000}
@@ -172,7 +172,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex justify-center w-full">
               <Image
-                className="w-3/4 rounded-xl"
+                className="w-[65%] rounded-xl"
                 src="/marsweather.png"
                 alt="Slide 4"
                 width={1000}

@@ -11,8 +11,8 @@ export default function About() {
   return (
     <main className={montserrat.className}>
       <section id="about">
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center bg-neutral-900  rounded-t-[45px]">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <div className="container mx-auto flex px-10 py-auto md:flex-row flex-col items-center bg-neutral-900  rounded-t-[45px] h-[75vh]">
+          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-20 items-center text-center">
             <h1 className="title-font text-7xl font-medium text-white">
               <br className="hidden lg:inline-block font-medium" />
               Let&apos;s bring your ideas to life.
@@ -51,6 +51,7 @@ export default function About() {
             />
           </div>
         </div>
+        <div className="container mx-auto flex px-10 py-auto md:flex-row flex-col items-center bg-gradient-to-b from-neutral-900 via-black-900 to-black h-[16vh]"></div>
       </section>
     </main>
   );

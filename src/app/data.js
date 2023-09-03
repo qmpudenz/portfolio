@@ -38,14 +38,14 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "&apos;The project was to make a calculator inside Zoho Commerce. Although we did not went to develop directly into Zoho, his idea and proposal went excellent in our costs and timing. Quinn delivered good work on this development project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he was very forthcoming that the additional work was outside his area of expertise. I enjoyed working with Quinn and will likely have additional jobs for him in the future.&apos;",
+      "'The project was to make a calculator inside Zoho Commerce. Although we did not went to develop directly into Zoho, his idea and proposal went excellent in our costs and timing. Quinn delivered good work on this development project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he was very forthcoming that the additional work was outside his area of expertise. I enjoyed working with Quinn and will likely have additional jobs for him in the future.'",
     image: "",
     name: "Jose A.",
     company: "for Doctor Nugget",
   },
   {
     quote:
-      "&apos;Quinn delivered great code and I enjoyed working with him. His communication was excellent and he met all of my deadlines. I had an additional milestone for him and he hopped right on it. I will be hiring him again real soon!&apos;",
+      "'Quinn delivered great code and I enjoyed working with him. His communication was excellent and he met all of my deadlines. I had an additional milestone for him and he hopped right on it. I will be hiring him again real soon!'",
     image: "",
     name: "Jenny C.",
     company: "for Big Noise Beer",
