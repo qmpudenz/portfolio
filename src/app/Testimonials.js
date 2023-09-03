@@ -43,7 +43,7 @@ export default function Testimonials() {
                     <span className="title-font text-2xl font-medium text-white">
                       {testimonial.name}
                     </span>
-                    <span className="text-gray-500 text-2xl font-extralight uppercase">
+                    <span className="text-gray-500 text-xl font-extralight uppercase">
                       {testimonial.company}
                     </span>
                   </span>
