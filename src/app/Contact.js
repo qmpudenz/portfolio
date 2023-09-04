@@ -8,7 +8,7 @@ export default function Contact() {
   function encode(data) {
     return Object.keys(data)
       .map(
-        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]),
       )
       .join("&");
   }
@@ -26,8 +26,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative">
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+      <div className="container mx-auto flex flex-wrap px-5 py-10 sm:flex-nowrap">
+        <div className="relative flex items-end justify-start overflow-hidden rounded-lg bg-gray-900 p-10 sm:mr-10 md:w-1/2 lg:w-2/3">
           <iframe
             width="100%"
             height="100%"
@@ -39,15 +39,15 @@ export default function Contact() {
             style={{ filter: "opacity(0.7)" }}
             src="https://www.google.com/maps/embed/v1/place?q=north+kansas+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           />
-          <div className="bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md">
-            <div className="lg:w-100 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs">
+          <div className="relative flex flex-wrap rounded bg-gray-900 py-6 shadow-md">
+            <div className="lg:w-100 mt-4 px-6 lg:mt-0">
+              <h2 className="title-font text-xs font-semibold tracking-widest text-white">
                 EMAIL
               </h2>
-              <a className="text-indigo-400 leading-relaxed">
+              <a className="leading-relaxed text-indigo-400">
                 quinnpudenz@gmail.com
               </a>
-              <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
+              <h2 className="title-font mt-4 text-xs font-semibold tracking-widest text-white">
                 PHONE
               </h2>
               <p className="leading-relaxed">123-456-7890</p>
@@ -58,56 +58,56 @@ export default function Contact() {
           netlify
           name="contact"
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
+          className="mt-8 flex w-full flex-col md:ml-auto md:mt-0 md:w-1/2 md:py-8 lg:w-1/3"
         >
-          <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
+          <h2 className="title-font mb-1 text-3xl font-medium text-white sm:text-4xl">
             Hire Me
           </h2>
-          <p className="leading-relaxed mb-5">
+          <p className="mb-5 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
             suscipit officia aspernatur veritatis. Asperiores, aliquid?
           </p>
           <div className="relative mb-4">
-            <label htmlFor="name" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="name" className="text-sm leading-7 text-gray-400">
               Name
             </label>
             <input
               type="text"
               id="name"
               name="name"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className="relative mb-4">
-            <label htmlFor="email" className="leading-7 text-sm text-gray-400">
+            <label htmlFor="email" className="text-sm leading-7 text-gray-400">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-8 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="relative mb-4">
             <label
               htmlFor="message"
-              className="leading-7 text-sm text-gray-400"
+              className="text-sm leading-7 text-gray-400"
             >
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="h-32 w-full resize-none rounded border border-gray-700 bg-gray-800 px-3 py-1 text-base leading-6 text-gray-100 outline-none transition-colors duration-200 ease-in-out focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900"
               onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className="rounded border-0 bg-indigo-500 px-6 py-2 text-lg text-white hover:bg-indigo-600 focus:outline-none"
           >
             Submit
           </button>
