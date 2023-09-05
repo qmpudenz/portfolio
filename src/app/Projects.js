@@ -59,7 +59,7 @@ class Projects extends React.Component {
   renderDots() {
     const slides = this.siema ? this.siema.innerElements : [];
     return (
-      <div className="absolute bottom-10 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black bg-opacity-50 p-2">
+      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black bg-opacity-50 p-2 sm:bottom-10">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -77,15 +77,17 @@ class Projects extends React.Component {
     const activeProject = projects[this.state.activeSlide];
     return (
       <div
-        className="absolute bottom-20 left-1/2 h-auto w-[60vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl"
+        className="absolute bottom-[8rem] left-1/2 h-auto w-[85vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
         style={{ maxHeight: "50%" }}
         onMouseEnter={() => this.setState({ showInfo: true })}
         onMouseLeave={() => this.setState({ showInfo: false })}
       >
         <h3 className="text-gray-300">{activeProject.subtitle}</h3>
         <h2 className="text-2xl font-bold text-white">{activeProject.title}</h2>
-        <p className="text-m py-4 text-gray-200">{activeProject.description}</p>
-        <div className="mt-4 flex space-x-4">
+        <p className="sm:display text-m hidden py-4 text-gray-200">
+          {activeProject.description}
+        </p>
+        <div className="mt-4 flex space-x-4 text-sm sm:text-lg">
           {activeProject.github && (
             <a
               href={activeProject.github}
@@ -118,17 +120,17 @@ class Projects extends React.Component {
     return (
       <div
         id="portfolio"
-        className="flex-column relative items-center justify-center overflow-hidden"
+        className="flex-column relative h-[75vh] items-center justify-center overflow-hidden"
       >
         <div>
           <div className="flex flex-wrap justify-center">
             <CodeIcon className="mx-4 mb-4 inline-block w-10" />
-            <h1 className="title-font mb-4 text-3xl font-medium text-white sm:text-4xl">
+            <h1 className="title-font mb-4 mr-4 text-3xl font-medium text-white sm:text-4xl">
               Previous Work
             </h1>
           </div>
 
-          <p className="mx-auto px-20 pb-8 text-xl font-light leading-relaxed lg:w-3/4">
+          <p className="mx-auto px-5 pb-8 text-sm font-light leading-relaxed sm:text-xl md:px-20 lg:w-3/4">
             From refining e-commerce websites on platforms like Shopify and
             Editor X, to developing customized code for clients, I&apos;ve
             delivered diverse projects both on and off Upwork, showcasing
@@ -139,7 +141,7 @@ class Projects extends React.Component {
           <div className="siema overflow-hidden">
             <div className="flex w-full justify-center">
               <Image
-                className="w-[65%] rounded-xl"
+                className="w-[90%] rounded-xl sm:w-[65%]"
                 src="/bignoisebeer.png"
                 alt="Slide 1"
                 width={1000} // Example width, adjust as needed
@@ -150,7 +152,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex w-full justify-center">
               <Image
-                className="w-[65%] rounded-xl"
+                className="w-[90%] rounded-xl sm:w-[65%]"
                 src="/studioart.png"
                 alt="Slide 2"
                 width={1000}
@@ -161,7 +163,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex w-full justify-center">
               <Image
-                className="w-[65%] rounded-xl"
+                className="w-[90%] rounded-xl sm:w-[65%]"
                 src="/candlestick.jpeg"
                 alt="Slide 3"
                 width={1000}
@@ -172,7 +174,7 @@ class Projects extends React.Component {
             </div>
             <div className="flex w-full justify-center">
               <Image
-                className="w-[65%] rounded-xl"
+                className="w-[90%] rounded-xl sm:w-[65%]"
                 src="/marsweather.png"
                 alt="Slide 4"
                 width={1000}
@@ -185,7 +187,7 @@ class Projects extends React.Component {
           </div>
           <button
             onClick={isAtStart ? null : this.prev.bind(this)}
-            className={`absolute left-[5%] top-1/2 -translate-y-1/2 transform text-8xl ${
+            className={`absolute left-[8%] top-1/2 -translate-y-1/2 transform text-2xl md:text-8xl ${
               isAtStart
                 ? "cursor-not-allowed text-gray-400"
                 : "text-blue-500 hover:text-blue-600 active:text-blue-700"
@@ -195,7 +197,7 @@ class Projects extends React.Component {
           </button>
           <button
             onClick={isAtEnd ? null : this.next.bind(this)}
-            className={`absolute right-[5%] top-1/2 -translate-y-1/2 transform text-8xl ${
+            className={`absolute right-[8%] top-1/2 -translate-y-1/2 transform text-2xl md:text-8xl ${
               isAtEnd
                 ? "cursor-not-allowed text-gray-400"
                 : "text-blue-500 hover:text-blue-600 active:text-blue-700"
