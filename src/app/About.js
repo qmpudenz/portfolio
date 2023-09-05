@@ -11,15 +11,15 @@ export default function About() {
   return (
     <main className={montserrat.className}>
       <section id="about" className="flex flex-col items-center">
-        <div className="py-auto align-center container mx-10 flex w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-10 pb-20  max-md:mx-5 max-md:h-[77vh] md:h-[88vh] md:flex-row lg:h-[88vh]">
+        <div className="py-auto align-center container mx-10 flex w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-5 pb-10 max-md:mx-5 max-md:h-[73vh] sm:pb-20 md:h-[88vh] md:flex-row lg:h-[88vh]">
           <div className=" flex flex-col items-center text-left md:w-1/2 md:items-start lg:flex-grow">
             <div className="align-center flex flex-col sm:flex-row">
-              <h1 className="title-font text-left text-lg font-medium text-white sm:w-1/2 sm:text-3xl md:w-full md:text-5xl lg:text-5xl xl:text-7xl">
+              <h1 className="title-font text-center text-lg font-medium text-white sm:w-1/2 sm:text-left sm:text-3xl md:w-full md:text-5xl lg:text-5xl xl:text-7xl">
                 <br className="flex font-medium" />
                 Let&apos;s bring your ideas to life.
               </h1>
               <div className="flex items-center justify-center md:hidden md:w-1/2">
-                <div className="w-5/6 md:hidden md:w-1/2">
+                <div className="mt-2 w-1/2 md:hidden md:w-1/2">
                   <Image
                     className="max-sm:display rounded object-cover object-center md:hidden"
                     alt="hero"
@@ -54,7 +54,7 @@ export default function About() {
               </a>
             </div>
           </div>
-          <div className="flex w-5/6 justify-center sm:w-1/4 md:w-1/2">
+          <div className="flex w-5/6 justify-center sm:w-1/4 md:w-1/2 lg:w-5/6">
             <Image
               className="xl:display rounded object-cover object-center max-md:hidden"
               alt="hero"
