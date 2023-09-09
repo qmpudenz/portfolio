@@ -29,21 +29,23 @@ body {
 .scroll-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 91vh;
+  height: 90vh;
   top: 9vh;
 }
 
 .module {
   scroll-snap-align: start;
-  height: 91vh;
+  height: 90vh;
   margin: 0;
 }
 
 .sticky-nav {
   position: sticky;
-  height: 9vh;
+  height: 10vh;
   top: 0;
-  /* Additional styling as needed */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .raise:hover,

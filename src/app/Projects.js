@@ -77,14 +77,14 @@ class Projects extends React.Component {
     const activeProject = projects[this.state.activeSlide];
     return (
       <div
-        className="absolute bottom-[8rem] left-1/2 h-auto w-[85vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
+        className="absolute bottom-[6rem] left-1/2 h-auto w-[85vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
         style={{ maxHeight: "50%" }}
         onMouseEnter={() => this.setState({ showInfo: true })}
         onMouseLeave={() => this.setState({ showInfo: false })}
       >
         <h3 className="text-gray-300">{activeProject.subtitle}</h3>
         <h2 className="text-2xl font-bold text-white">{activeProject.title}</h2>
-        <p className="sm:display text-m hidden py-4 text-gray-200">
+        <p className="py-4 text-sm text-gray-200 sm:flex">
           {activeProject.description}
         </p>
         <div className="mt-4 flex space-x-4 text-sm sm:text-lg">
@@ -120,12 +120,12 @@ class Projects extends React.Component {
     return (
       <div
         id="portfolio"
-        className="flex-column relative h-[75vh] items-center justify-center overflow-hidden"
+        className="flex-column relative h-[90vh] items-center justify-center overflow-hidden"
       >
         <div>
           <div className="flex flex-wrap justify-center">
-            <CodeIcon className="mx-4 mb-4 inline-block w-10" />
-            <h1 className="title-font mb-4 mr-4 text-3xl font-medium text-white sm:text-4xl">
+            <CodeIcon className="mb-4 mr-4 inline-block w-10" />
+            <h1 className="title-font mb-4 text-4xl font-medium text-white sm:text-4xl">
               Previous Work
             </h1>
           </div>

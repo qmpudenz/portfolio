@@ -53,15 +53,18 @@ export const testimonials = [
 ];
 
 export const skills = [
-  "HTML",
-  "React",
-  "Editor X",
-  "JavaScript",
-  "Next.js",
-  "Shopify",
-  "CSS",
-  "Node",
-  "WordPress",
-  "Figma",
-  "MySQL",
+  { name: "HTML", category: "web" },
+  { name: "React", category: "web" },
+  { name: "JavaScript", category: "web" },
+  { name: "CSS", category: "web" },
+  { name: "Next.js", category: "web" },
+
+  { name: "Editor X", category: "tools" },
+  { name: "Shopify", category: "tools" },
+  { name: "WordPress", category: "tools" },
+
+  { name: "Figma", category: "design" },
+
+  { name: "Node", category: "backend" },
+  { name: "MySQL", category: "backend" },
 ];

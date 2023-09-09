@@ -18,7 +18,9 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div className={inter.className}>
+      <div className='sticky-nav'>
       <Navbar />
+        </div>
 
       <div className="scroll-container"> 
         <div className="module"><About /></div>
