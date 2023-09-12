@@ -45,6 +45,14 @@ body {
   align-items: center;
 }
 
+.vh90 {
+  height: calc(var(--vh, 1vh) * 0.9);
+}
+
+.vh10 {
+  height: calc(var(--vh, 1vh) * 0.1);
+}
+
 .raise:hover,
 .raise:focus {
   box-shadow: 0 0.5em 0.5em -0.4em var(--hover);

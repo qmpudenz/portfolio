@@ -11,7 +11,7 @@ export default function About() {
   return (
     <main className="h-full">
       <section id="about" className="flex h-full flex-col items-center">
-        <div className="py-auto align-center container mx-10 flex h-[95%] w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-5 max-md:mx-5 sm:pb-20 md:flex-row">
+        <div className="py-auto align-center container mx-10 flex h-[97.5%] w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-5 max-md:mx-5 sm:pb-20 md:flex-row">
           <div className=" flex h-[95%] flex-col items-center justify-evenly text-left md:w-1/2 md:items-start lg:flex-grow">
             <div className="align-center flex flex-col justify-end sm:flex-row">
               <h1 className="title-font w-[75vw] text-center text-3xl font-medium text-white sm:w-1/2 sm:text-left sm:text-3xl md:w-full md:text-5xl lg:text-5xl xl:text-7xl">
