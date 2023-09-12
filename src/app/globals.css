@@ -35,13 +35,13 @@ body {
 
 .module {
   scroll-snap-align: start;
-  height: 90vh;
+  height: 100%;
   margin: 0;
 }
 
 .sticky-nav {
   position: sticky;
-  height: 10vh;
+  height: 10%;
   top: 0;
   display: flex;
   justify-content: flex-start;

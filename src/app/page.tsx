@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <div className={inter.className}>
-      <div className='sticky-nav'>
+      <div>
       <Navbar />
         </div>
 

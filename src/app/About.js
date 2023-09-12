@@ -9,13 +9,12 @@ const montserrat = Montserrat({
 
 export default function About() {
   return (
-    <main className={montserrat.className}>
-      <section id="about" className="flex flex-col items-center">
-        <div className="py-auto align-center container mx-10 flex h-[88vh] w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-5 max-md:mx-5 sm:pb-20 md:flex-row">
-          <div className=" flex flex-col items-center justify-evenly text-left md:w-1/2 md:items-start lg:flex-grow">
-            <div className="align-center flex h-[40vh] flex-col justify-end sm:flex-row">
+    <main className="h-full">
+      <section id="about" className="flex h-full flex-col items-center">
+        <div className="py-auto align-center container mx-10 flex h-[95%] w-auto flex-col items-center justify-center rounded-t-[45px] bg-neutral-900 px-5 max-md:mx-5 sm:pb-20 md:flex-row">
+          <div className=" flex h-[95%] flex-col items-center justify-evenly text-left md:w-1/2 md:items-start lg:flex-grow">
+            <div className="align-center flex flex-col justify-end sm:flex-row">
               <h1 className="title-font w-[75vw] text-center text-3xl font-medium text-white sm:w-1/2 sm:text-left sm:text-3xl md:w-full md:text-5xl lg:text-5xl xl:text-7xl">
-                <br className="flex font-medium" />
                 Let&apos;s bring your ideas to life.
               </h1>
               <div className="flex items-center justify-center md:hidden md:w-1/2">
@@ -30,7 +29,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex h-[36vh] flex-col justify-evenly">
+            <div className="flex h-[32%] flex-col justify-evenly">
               <p className="sm:text-md text-md leading-relaxed text-white md:text-lg lg:text-xl xl:text-2xl">
                 I&apos;m a freelance developer based out of Kansas City,
                 passionate about building beautiful, functional websites and
@@ -42,7 +41,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex h-[8vh] flex-col justify-center">
+            <div className="flex h-[8%] flex-col justify-center">
               <a
                 href="#contact"
                 className=" text-md inline-flex rounded border-0 bg-white px-6 py-2 text-black hover:bg-sky-400  focus:outline-none md:text-lg"
