@@ -17,12 +17,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div className={inter.className}>
+    <div className="h-full">
       <div>
       <Navbar />
         </div>
 
-      <div className="scroll-container"> 
+      <div className="scroll-container h-[90vh]"> 
         <div className="module"><About /></div>
         <div className="module"><Projects /></div>
         <div className="module"><Skills /></div> 

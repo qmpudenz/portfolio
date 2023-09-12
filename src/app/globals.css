@@ -29,8 +29,6 @@ body {
 .scroll-container {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  height: 90vh;
-  top: 9vh;
 }
 
 .module {
@@ -41,7 +39,6 @@ body {
 
 .sticky-nav {
   position: sticky;
-  height: 10%;
   top: 0;
   display: flex;
   justify-content: flex-start;

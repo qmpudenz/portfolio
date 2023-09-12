@@ -29,7 +29,7 @@ export default function About() {
                 </div>
               </div>
             </div>
-            <div className="flex h-[32%] flex-col justify-evenly">
+            <div className="flex flex-col justify-evenly">
               <p className="sm:text-md text-md leading-relaxed text-white md:text-lg lg:text-xl xl:text-2xl">
                 I&apos;m a freelance developer based out of Kansas City,
                 passionate about building beautiful, functional websites and
@@ -41,7 +41,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="flex h-[8%] flex-col justify-center">
+            <div className="flex flex-col justify-center">
               <a
                 href="#contact"
                 className=" text-md inline-flex rounded border-0 bg-white px-6 py-2 text-black hover:bg-sky-400  focus:outline-none md:text-lg"
