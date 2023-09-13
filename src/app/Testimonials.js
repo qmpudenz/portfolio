@@ -7,7 +7,7 @@ import { faCrown } from "@fortawesome/free-solid-svg-icons";
 export default function Testimonials() {
   return (
     <section id="testimonials">
-      <div className="container mx-auto flex h-[90vh] flex-col justify-center px-5 py-10 text-center">
+      <div className="container mx-auto flex h-full flex-col justify-center px-5 py-10 text-center">
         <div className="flex flex-wrap justify-center">
           <UsersIcon className="inline-block w-10" />
           <h1 className="title-font pl-3 text-3xl font-medium text-white sm:text-4xl">

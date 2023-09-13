@@ -59,7 +59,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex h-[90vh] flex-wrap items-center justify-center bg-black max-sm:items-baseline sm:items-baseline md:items-center"
+      className="flex h-full flex-wrap items-center justify-center bg-black max-sm:items-baseline sm:items-baseline md:items-center"
     >
       <div className="container mx-auto flex h-[90vh] flex-col justify-evenly rounded-[45px] bg-transparent px-5 py-5 sm:bg-neutral-900">
         <div className="mb-10 flex h-[40vh] flex-col justify-center text-center">

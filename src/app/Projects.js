@@ -120,7 +120,7 @@ class Projects extends React.Component {
     return (
       <div
         id="portfolio"
-        className="flex-column relative h-[90vh] items-center justify-center overflow-hidden"
+        className="flex-column relative h-full items-center justify-center overflow-hidden"
       >
         <div>
           <div className="flex flex-wrap justify-center">
