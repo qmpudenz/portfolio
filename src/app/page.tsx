@@ -31,7 +31,7 @@ export default function Home() {
 
   return (
     <div className="h-full">
-      <div className='vh10'>
+      <div>
       <Navbar />
         </div>
 
