@@ -10,7 +10,7 @@ const caprasimo = Caprasimo({
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-10 bg-gradient-to-t from-black/80 via-black/90 to-black md:sticky">
+    <header className="static top-0 z-10 bg-gradient-to-t from-black/80 via-black/90 to-black md:sticky">
       <div className="container mx-auto flex flex-col flex-wrap items-center p-4 md:flex-row">
         <div className={caprasimo.className}>
           <div className="title-font font-medium text-white md:mb-0">
