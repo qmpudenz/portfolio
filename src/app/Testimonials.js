@@ -26,7 +26,7 @@ export default function Testimonials() {
         <div className="mt-2 flex flex-wrap">
           {testimonials.map((testimonial) => (
             <div key={testimonial.id} className="w-full md:w-1/2">
-              <div className="mb-4 flex h-[32vh] flex-col justify-between rounded bg-neutral-900 p-4">
+              <div className="mb-4 flex flex-col justify-between rounded bg-neutral-900 p-4">
                 <TerminalIcon className="block w-8 text-gray-500" />
                 <p className="h-[12vh] overflow-scroll text-lg font-light leading-relaxed">
                   {testimonial.quote}

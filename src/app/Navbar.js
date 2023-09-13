@@ -19,7 +19,7 @@ export default function Navbar() {
             </a>
           </div>
         </div>
-        <nav className="lex hidden flex-wrap items-center justify-center text-white md:ml-4	md:mr-auto md:border-l md:border-gray-700 md:py-1 md:pl-4">
+        <nav className="hidden flex-wrap items-center justify-center text-white md:ml-4	md:mr-auto md:border-l md:border-gray-700 md:py-1 md:pl-4">
           <a href="#portfolio" className="mr-5 hover:text-white">
             Portfolio
           </a>
@@ -32,7 +32,7 @@ export default function Navbar() {
         </nav>
         <a
           href="#contact"
-          className="raise mt-4 inline-flex hidden items-center rounded border-0 bg-sky-400 px-3 py-1 text-base text-black hover:bg-sky-400 focus:outline-none md:mt-0"
+          className="raise mt-4 hidden items-center rounded border-0 bg-sky-400 px-3 py-1 text-base text-black hover:bg-sky-400 focus:outline-none md:mt-0"
         >
           Contact
           <ArrowRightIcon className="ml-1 h-4 w-4" />

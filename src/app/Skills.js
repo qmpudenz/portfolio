@@ -62,7 +62,7 @@ export default function Skills() {
       className="flex h-full flex-wrap items-center justify-center bg-black max-sm:items-baseline sm:items-baseline md:items-center"
     >
       <div className="container mx-auto flex h-full flex-col justify-evenly rounded-[45px] bg-transparent px-5 py-5 sm:bg-neutral-900">
-        <div className="mb-10 flex h-[40%] flex-col justify-center text-center">
+        <div className="mb-10 flex flex-col justify-center text-center">
           <div className="flex flex-wrap justify-center">
             <ChipIcon className="mb-4 mr-3 inline-block w-10" />
             <h1 className="title-font mb-4 hidden text-3xl font-medium text-white sm:flex sm:text-4xl">
