@@ -59,7 +59,7 @@ class Projects extends React.Component {
   renderDots() {
     const slides = this.siema ? this.siema.innerElements : [];
     return (
-      <div className="absolute bottom-5 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black bg-opacity-50 p-2 sm:bottom-10">
+      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black/75 p-2 sm:bottom-10">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -77,12 +77,11 @@ class Projects extends React.Component {
     const activeProject = projects[this.state.activeSlide];
     return (
       <div
-        className="absolute bottom-[6rem] left-1/2 h-auto w-[85vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
-        style={{ maxHeight: "50%" }}
+        className="absolute bottom-[15%] left-1/2 h-auto w-[65vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
         onMouseEnter={() => this.setState({ showInfo: true })}
         onMouseLeave={() => this.setState({ showInfo: false })}
       >
-        <h3 className="text-gray-300">{activeProject.subtitle}</h3>
+        <h3 className="text-sm text-gray-300">{activeProject.subtitle}</h3>
         <h2 className="text-2xl font-bold text-white">{activeProject.title}</h2>
         <p className="py-4 text-sm text-gray-200 sm:flex">
           {activeProject.description}
@@ -142,7 +141,7 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/bignoisebeer.png"
+                src="/bignoisebeer(mobile).png"
                 alt="Slide 1"
                 width={1000} // Example width, adjust as needed
                 height={500} // Example height, adjust as needed
@@ -153,7 +152,7 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/studioart.png"
+                src="/studioart211(mobile).png"
                 alt="Slide 2"
                 width={1000}
                 height={500}
@@ -164,7 +163,7 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/candlestick.jpeg"
+                src="/candlestick(close).png"
                 alt="Slide 3"
                 width={1000}
                 height={500}
@@ -175,7 +174,7 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/marsweather.png"
+                src="/marsweather(mobile).png"
                 alt="Slide 4"
                 width={1000}
                 height={500}
@@ -187,7 +186,7 @@ class Projects extends React.Component {
           </div>
           <button
             onClick={isAtStart ? null : this.prev.bind(this)}
-            className={`absolute left-[8%] top-1/2 -translate-y-1/2 transform text-2xl md:text-8xl ${
+            className={`absolute left-[6%] top-1/2 -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl md:text-8xl ${
               isAtStart
                 ? "cursor-not-allowed text-gray-400"
                 : "text-blue-500 hover:text-blue-600 active:text-blue-700"
@@ -197,7 +196,7 @@ class Projects extends React.Component {
           </button>
           <button
             onClick={isAtEnd ? null : this.next.bind(this)}
-            className={`absolute right-[8%] top-1/2 -translate-y-1/2 transform text-2xl md:text-8xl ${
+            className={`absolute right-[6%] top-1/2 -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl md:text-8xl ${
               isAtEnd
                 ? "cursor-not-allowed text-gray-400"
                 : "text-blue-500 hover:text-blue-600 active:text-blue-700"

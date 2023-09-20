@@ -30,7 +30,7 @@ export default function About() {
               </div>
             </div>
             <div className="flex flex-col justify-evenly">
-              <p className="sm:text-md text-md leading-relaxed text-white md:text-lg lg:text-xl xl:text-2xl">
+              <p className="sm:text-md text-md mb-1 leading-relaxed text-white md:text-lg lg:text-xl xl:text-2xl">
                 I&apos;m a freelance developer based out of Kansas City,
                 passionate about building beautiful, functional websites and
                 applications.
