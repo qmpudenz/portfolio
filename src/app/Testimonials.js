@@ -26,7 +26,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="flex h-full justify-center">
       <div className="container mx-auto flex h-full flex-col justify-center px-5 text-center">
-        <div className="h-[15%]">
+        <div className="h-auto">
           <div className="flex flex-wrap justify-center">
             <UsersIcon className="inline-block w-10" />
             <h1 className="title-font pl-3 text-3xl font-medium text-white sm:text-4xl">
@@ -43,6 +43,9 @@ export default function Testimonials() {
               100% Success Rate on Upwork
             </h2>
           </div>
+          <div>
+            <h4 className="italic">Swipe for more.</h4>
+          </div>
         </div>
 
         <div className="mt-2 flex h-[85%] flex-wrap">
@@ -54,7 +57,7 @@ export default function Testimonials() {
                     <TerminalIcon className="block w-8 text-gray-500" />
                   </div>
                   <div>
-                    <p className="h-[50vh] overflow-scroll text-lg font-light leading-relaxed">
+                    <p className="mb-2 h-auto max-h-[45vh] overflow-scroll text-left text-lg font-light leading-relaxed">
                       {testimonial.quote}
                     </p>
                   </div>
