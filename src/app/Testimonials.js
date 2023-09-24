@@ -77,9 +77,6 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-        <div>
-          <h4 className="mt-2 italic">Swipe for more.</h4>
-        </div>
       </div>
     </section>
   );
