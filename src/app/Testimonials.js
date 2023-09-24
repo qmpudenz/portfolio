@@ -55,7 +55,7 @@ export default function Testimonials() {
                     <TerminalIcon className="block w-8 text-gray-500" />
                   </div>
                   <div>
-                    <p className="mb-2 h-auto max-h-[45vh] overflow-scroll text-left text-lg font-light leading-relaxed">
+                    <p className="mb-2 h-auto max-h-[40vh] overflow-scroll text-left text-lg font-light leading-relaxed">
                       {testimonial.quote}
                     </p>
                   </div>
@@ -76,6 +76,9 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
+        </div>
+        <div>
+          <h4 className="mt-2 italic">Swipe for more.</h4>
         </div>
       </div>
     </section>
