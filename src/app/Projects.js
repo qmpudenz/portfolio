@@ -122,9 +122,9 @@ class Projects extends React.Component {
         className="flex-column relative h-full items-center justify-center overflow-hidden"
       >
         <div>
-          <div className="flex flex-wrap justify-center">
-            <CodeIcon className="mb-4 mr-4 inline-block w-10" />
-            <h1 className="title-font mb-4 text-4xl font-medium text-white sm:text-4xl">
+          <div className="justify-left mb-4 ml-[5%] mt-2 flex flex-wrap">
+            <CodeIcon className="mr-[2.5%] inline-block w-[10%]" />
+            <h1 className="title-font text-4xl font-medium text-white sm:text-4xl">
               Previous Work
             </h1>
           </div>

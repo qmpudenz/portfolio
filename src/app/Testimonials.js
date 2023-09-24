@@ -24,17 +24,17 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="flex h-full justify-center">
-      <div className="container mx-auto flex h-full flex-col justify-center px-5 text-center">
+    <section id="testimonials" className="flex h-full flex-col justify-center">
+      <div className="">
         <div className="h-auto">
-          <div className="flex flex-wrap justify-center">
-            <UsersIcon className="inline-block w-10" />
-            <h1 className="title-font pl-3 text-3xl font-medium text-white sm:text-4xl">
+          <div className="justify-left ml-[5%] mt-2 flex flex-wrap">
+            <UsersIcon className="mr-[2.5%] inline-block w-[10%]" />
+            <h1 className="title-font text-3xl font-medium text-white sm:text-4xl">
               Client Testimonials
             </h1>
           </div>
 
-          <div className="flex items-center justify-center">
+          <div className="justify-left ml-[5%] flex items-center">
             <div className="flex h-[30px] w-[30px] items-center justify-evenly rounded-full border-[1px] border-white">
               <FontAwesomeIcon icon={faCrown} className="color-white text-lg" />
             </div>
@@ -43,11 +43,9 @@ export default function Testimonials() {
               100% Success Rate on Upwork
             </h2>
           </div>
-          <div>
-            <h4 className="italic">Swipe for more.</h4>
-          </div>
         </div>
-
+      </div>
+      <div className="container mx-auto flex h-full flex-col px-5 text-center">
         <div className="mt-2 flex h-[85%] flex-wrap">
           <div className="siema-slider">
             {testimonials.map((testimonial) => (
@@ -78,6 +76,9 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
+        </div>
+        <div>
+          <h4 className="mt-2 italic">Swipe for more.</h4>
         </div>
       </div>
     </section>
