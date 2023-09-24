@@ -64,7 +64,7 @@ export default function Skills() {
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5 sm:bg-neutral-900">
         <div className="mb-10 flex flex-col justify-center text-center">
           <div className="justify-left mb-4 mt-2 flex flex-wrap">
-            <ChipIcon className="mr-[2.5%] inline-block w-10" />
+            <ChipIcon className="mr-[2.5%] inline-block w-[10%]" />
             <h1 className="title-font hidden text-3xl font-medium text-white sm:flex sm:text-4xl">
               Skills &amp; Technologies
             </h1>
