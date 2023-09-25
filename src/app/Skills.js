@@ -73,7 +73,7 @@ export default function Skills() {
             </h1>
           </div>
 
-          <p className="sm:text-md mx-auto text-left indent-1 text-[2.25vh] text-sm font-light leading-relaxed lg:w-3/4 xl:w-[60vw] xl:text-2xl">
+          <p className="sm:text-md mx-auto text-left text-[2.25vh] text-sm font-light leading-relaxed lg:w-3/4 xl:w-[60vw] xl:text-2xl">
             Skilled in leveraging tools like Node and React, my experience spans
             from creating bespoke projects like a Mars Weather app (using
             NASA&apos;s JSON data) to crafting unique designs on Editor X for an

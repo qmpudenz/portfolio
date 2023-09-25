@@ -141,10 +141,10 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/bignoisebeer(mobile).png"
-                alt="Slide 1"
-                width={1000} // Example width, adjust as needed
-                height={500} // Example height, adjust as needed
+                src="/studioart211(mobile).png"
+                alt="Slide 2"
+                width={1000}
+                height={500}
                 onMouseEnter={() => this.setState({ showInfo: true })}
                 onMouseLeave={() => this.setState({ showInfo: false })}
               />
@@ -152,10 +152,10 @@ class Projects extends React.Component {
             <div className="flex w-full justify-center">
               <Image
                 className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/studioart211(mobile).png"
-                alt="Slide 2"
-                width={1000}
-                height={500}
+                src="/bignoisebeer(mobile).png"
+                alt="Slide 1"
+                width={1000} // Example width, adjust as needed
+                height={500} // Example height, adjust as needed
                 onMouseEnter={() => this.setState({ showInfo: true })}
                 onMouseLeave={() => this.setState({ showInfo: false })}
               />
