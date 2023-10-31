@@ -19,12 +19,12 @@ export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="static top-0 z-10 bg-gradient-to-t from-black/80 via-black/90 to-black md:sticky">
+    <header className="static top-0 z-10 bg-white text-black md:sticky">
       <div className="container mx-auto flex flex-row flex-wrap items-center justify-between px-[5%] py-4 md:flex-row">
         {/* Name OR Links */}
         <div className={`${caprasimo.className} flex-grow`}>
           {isMobileMenuOpen ? (
-            <nav className="flex-wrap items-center justify-start py-1 text-white md:mr-auto md:border-l md:border-gray-700 md:py-1 md:pl-4">
+            <nav className="flex-wrap items-center justify-start py-1 text-black md:mr-auto md:border-l md:border-gray-700 md:py-1 md:pl-4">
               <a href="#portfolio" className="mr-5 hover:text-white">
                 Portfolio
               </a>
@@ -36,7 +36,7 @@ export default function Navbar() {
               </a>
             </nav>
           ) : (
-            <div className="title-font font-medium text-white md:mb-0">
+            <div className="title-font font-medium text-black md:mb-0">
               <a href="#about" className="text-2xl">
                 Quinn Pudenz
               </a>

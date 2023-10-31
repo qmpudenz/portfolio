@@ -24,19 +24,22 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section id="testimonials" className="flex h-full flex-col justify-center">
+    <section
+      id="testimonials"
+      className="flex h-full flex-col justify-center bg-gradient-to-tr from-white via-white to-green-600"
+    >
       <div className="">
         <div className="h-auto">
           <div className="justify-left ml-[5%] mt-2 flex flex-wrap">
-            <UsersIcon className="mr-[2.5%] inline-block w-[10%]" />
-            <h1 className="title-font text-3xl font-medium text-white sm:text-4xl">
+            <UsersIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
+            <h1 className="title-font text-3xl font-medium text-black sm:text-4xl">
               Client Testimonials
             </h1>
           </div>
 
-          <div className="justify-left ml-[5%] flex items-center">
-            <div className="flex h-[30px] w-[30px] items-center justify-evenly rounded-full border-[1px] border-white">
-              <FontAwesomeIcon icon={faCrown} className="color-white text-lg" />
+          <div className="justify-left ml-[5%] flex items-center text-black">
+            <div className="flex h-[30px] w-[30px] items-center justify-evenly rounded-full border-[1px] border-black">
+              <FontAwesomeIcon icon={faCrown} className="text-lg " />
             </div>
 
             <h2 className="p-4 text-lg font-thin">

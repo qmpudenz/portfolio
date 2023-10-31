@@ -59,21 +59,21 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex h-full flex-wrap items-center justify-center bg-black max-sm:items-baseline sm:items-baseline md:items-center"
+      className="flex h-full flex-wrap items-center justify-center bg-gradient-to-br from-white via-white to-green-600 max-sm:items-baseline sm:items-baseline md:items-center"
     >
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5 sm:bg-neutral-900">
         <div className="mb-10 flex flex-col justify-center text-center">
           <div className="justify-left mb-4 mt-2 flex flex-wrap">
-            <ChipIcon className="mr-[2.5%] inline-block w-[10%]" />
-            <h1 className="title-font hidden text-3xl font-medium text-white sm:flex sm:text-4xl">
+            <ChipIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
+            <h1 className="title-font hidden text-3xl font-medium text-black sm:flex sm:text-4xl">
               Skills &amp; Technologies
             </h1>
-            <h1 className="display title-font text-4xl font-medium text-white sm:hidden sm:text-4xl">
+            <h1 className="display title-font text-4xl font-medium text-black sm:hidden sm:text-4xl">
               Skills &amp; Tech
             </h1>
           </div>
 
-          <p className="sm:text-md mx-auto text-left text-[2.25vh] text-sm font-light leading-relaxed lg:w-3/4 xl:w-[60vw] xl:text-2xl">
+          <p className="sm:text-md mx-auto text-left text-[2.25vh] text-sm font-light leading-relaxed text-black lg:w-3/4 xl:w-[60vw] xl:text-2xl">
             Skilled in leveraging tools like Node and React, my experience spans
             from creating bespoke projects like a Mars Weather app (using
             NASA&apos;s JSON data) to crafting unique designs on Editor X for an

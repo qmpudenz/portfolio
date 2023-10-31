@@ -18,6 +18,9 @@ const config: Config = {
         caprasimo: ["caprasimo", "sans-serif"],
         montserrat: ["montserrat", "sans-serif"],
       },
+      screens: {
+        'custom': {'min': '500px', 'max': '640px'},
+      },
     },
   },
   plugins: [],

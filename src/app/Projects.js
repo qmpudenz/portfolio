@@ -123,13 +123,13 @@ class Projects extends React.Component {
       >
         <div>
           <div className="justify-left mb-4 ml-[5%] mt-2 flex flex-wrap">
-            <CodeIcon className="mr-[2.5%] inline-block w-[10%]" />
-            <h1 className="title-font text-4xl font-medium text-white sm:text-4xl">
+            <CodeIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
+            <h1 className="title-font text-4xl font-medium text-black sm:text-4xl">
               Previous Work
             </h1>
           </div>
 
-          <p className="mx-auto px-5 pb-8 text-sm font-light leading-relaxed sm:text-xl md:px-20 lg:w-3/4">
+          <p className="mx-auto px-5 pb-8 text-sm font-light leading-relaxed text-black sm:text-xl md:px-20 lg:w-3/4">
             From refining e-commerce websites on platforms like Shopify and
             Editor X, to developing customized code for clients, I&apos;ve
             delivered diverse projects both on and off Upwork, showcasing

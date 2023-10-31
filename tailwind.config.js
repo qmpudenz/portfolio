@@ -16,6 +16,9 @@ module.exports = {
         Caprasimo: ["Caprasimo", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
       },
+      screens: {
+        custom: { min: "500px", max: "640px" },
+      },
     },
   },
   variants: {
