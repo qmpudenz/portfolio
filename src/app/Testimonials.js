@@ -26,7 +26,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="flex h-full flex-col justify-center bg-gradient-to-tr from-white via-white to-green-600"
+      className="flex h-full flex-col justify-center bg-white"
     >
       <div className="">
         <div className="h-auto">
@@ -53,9 +53,9 @@ export default function Testimonials() {
           <div className="siema-slider">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="w-full md:w-1/2">
-                <div className="mb-4 flex h-[95%] flex-col justify-between rounded bg-neutral-900 p-4">
+                <div className="mb-4 flex h-[95%] flex-col justify-between rounded bg-gradient-to-r from-rose-500 to-red-500 p-4">
                   <div>
-                    <TerminalIcon className="block w-8 text-gray-500" />
+                    <TerminalIcon className="block w-8 text-white" />
                   </div>
                   <div>
                     <p className="mb-2 h-auto max-h-[40vh] overflow-scroll text-left text-lg font-light leading-relaxed">
@@ -69,7 +69,7 @@ export default function Testimonials() {
                         <span className="title-font text-2xl font-medium text-white">
                           {testimonial.name}
                         </span>
-                        <span className="text-xl font-extralight uppercase text-gray-500">
+                        <span className="text-xl font-extralight uppercase text-white">
                           {testimonial.company}
                         </span>
                       </span>
@@ -81,7 +81,7 @@ export default function Testimonials() {
           </div>
         </div>
         <div>
-          <h4 className="mt-2 italic">Swipe for more.</h4>
+          <h4 className="mt-2 italic text-black">Swipe for more.</h4>
         </div>
       </div>
     </section>

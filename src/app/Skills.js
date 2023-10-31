@@ -6,6 +6,14 @@ import Siema from "siema";
 import { skills } from "./data";
 
 export default function Skills() {
+  const categoryColors = {
+    web: "bg-green-500",
+    design: "bg-yellow-500",
+    tools: "bg-blue-500",
+    backend: "bg-red-500",
+    // ... add other categories and colors as needed
+  };
+
   const siemaRef = useRef(null);
   const [activeFilter, setActiveFilter] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0); // State to track current slide
@@ -59,7 +67,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex h-full flex-wrap items-center justify-center bg-gradient-to-br from-white via-white to-green-600 max-sm:items-baseline sm:items-baseline md:items-center"
+      className="flex h-full flex-wrap items-center justify-center bg-white max-sm:items-baseline sm:items-baseline md:items-center"
     >
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5 sm:bg-neutral-900">
         <div className="mb-10 flex flex-col justify-center text-center">
@@ -91,10 +99,12 @@ export default function Skills() {
                 setCurrentSlide(0); // Reset the slide index to 0
                 siemaRef.current.goTo(0); // Ensure Siema also begins at the start
               }}
-              className={`filter-button transform rounded-md bg-gray-600 px-3 py-2 transition-transform hover:-translate-y-0.5 hover:bg-gray-700 ${
-                activeFilter === filter
-                  ? "border-b-2 border-blue-800 bg-blue-600"
-                  : ""
+              className={`filter-button transform rounded-md px-3 py-2 transition-transform hover:-translate-y-0.5 ${
+                activeFilter === filter ? "border-b-2 border-blue-800" : ""
+              } ${categoryColors[filter] || "bg-gray-600"} hover:${
+                categoryColors[filter]
+                  ? categoryColors[filter].replace("bg-", "bg-darken-")
+                  : "bg-gray-700"
               }`}
             >
               {filter}
@@ -110,7 +120,11 @@ export default function Skills() {
             )
             .map((skill) => (
               <div key={skill.name} className="p-2">
-                <div className="flex h-full flex-col items-center rounded bg-gray-800 p-4">
+                <div
+                  className={`flex h-full flex-col items-center rounded p-4 ${
+                    categoryColors[skill.category] || "bg-gray-800"
+                  }`}
+                >
                   <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-sky-300" />
                   <span className="title-font font-sm sm:font-md text-white max-sm:text-sm">
                     {skill.name}
