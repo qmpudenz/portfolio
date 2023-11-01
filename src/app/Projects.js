@@ -59,7 +59,7 @@ class Projects extends React.Component {
   renderDots() {
     const slides = this.siema ? this.siema.innerElements : [];
     return (
-      <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black/75 p-2 sm:bottom-10">
+      <div className="absolute bottom-9 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black/75 p-2 sm:bottom-10">
         {slides.map((_, index) => (
           <span
             key={index}
@@ -77,7 +77,7 @@ class Projects extends React.Component {
     const activeProject = projects[this.state.activeSlide];
     return (
       <div
-        className="absolute bottom-[15%] left-1/2 h-auto w-[65vw] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
+        className="absolute bottom-[15%] left-1/2 h-auto w-[85%] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
         onMouseEnter={() => this.setState({ showInfo: true })}
         onMouseLeave={() => this.setState({ showInfo: false })}
       >
@@ -184,27 +184,27 @@ class Projects extends React.Component {
             </div>
             {/* Add as many slides as you need */}
           </div>
-          <button
-            onClick={isAtStart ? null : this.prev.bind(this)}
-            className={`absolute left-[6%] top-1/2 -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl md:text-8xl ${
-              isAtStart
-                ? "cursor-not-allowed text-gray-400"
-                : "text-blue-500 hover:text-blue-600 active:text-blue-700"
-            }`}
-          >
-            <FontAwesomeIcon icon={faChevronLeft} />
-          </button>
-          <button
-            onClick={isAtEnd ? null : this.next.bind(this)}
-            className={`absolute right-[6%] top-1/2 -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl md:text-8xl ${
-              isAtEnd
-                ? "cursor-not-allowed text-gray-400"
-                : "text-blue-500 hover:text-blue-600 active:text-blue-700"
-            }`}
-          >
-            <FontAwesomeIcon icon={faChevronRight} />
-          </button>
         </div>
+        <button
+          onClick={isAtStart ? null : this.prev.bind(this)}
+          className={`absolute bottom-0 left-[15%] -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl text-white md:text-8xl ${
+            isAtStart
+              ? "cursor-not-allowed text-gray-400"
+              : "hover:text-red text-black active:text-black"
+          }`}
+        >
+          <FontAwesomeIcon icon={faChevronLeft} />
+        </button>
+        <button
+          onClick={isAtEnd ? null : this.next.bind(this)}
+          className={`absolute bottom-0 right-[15%] -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl text-white md:text-8xl ${
+            isAtEnd
+              ? "cursor-not-allowed text-gray-400"
+              : "hover:text-red text-black active:text-black"
+          }`}
+        >
+          <FontAwesomeIcon icon={faChevronRight} />
+        </button>
         {this.state.showInfo && this.renderInfo()}
         {this.renderDots()}
       </div>

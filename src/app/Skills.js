@@ -8,7 +8,7 @@ import { skills } from "./data";
 export default function Skills() {
   const categoryColors = {
     web: "bg-green-500",
-    design: "bg-yellow-500",
+    design: "bg-orange-500",
     tools: "bg-blue-500",
     backend: "bg-red-500",
     // ... add other categories and colors as needed
@@ -67,9 +67,9 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="flex h-full flex-wrap items-center justify-center bg-white max-sm:items-baseline sm:items-baseline md:items-center"
+      className="max-sm:items-baseline flex h-full flex-wrap items-center justify-center bg-white sm:items-baseline md:items-center"
     >
-      <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5 sm:bg-neutral-900">
+      <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5">
         <div className="mb-10 flex flex-col justify-center text-center">
           <div className="justify-left mb-4 mt-2 flex flex-wrap">
             <ChipIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
@@ -90,7 +90,7 @@ export default function Skills() {
             dedication.
           </p>
         </div>
-        <div className="filters flex justify-evenly">
+        <div className="filters flex justify-evenly sm:w-1/2">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -125,8 +125,8 @@ export default function Skills() {
                     categoryColors[skill.category] || "bg-gray-800"
                   }`}
                 >
-                  <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-sky-300" />
-                  <span className="title-font font-sm sm:font-md text-white max-sm:text-sm">
+                  <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-white" />
+                  <span className="title-font font-sm sm:font-md max-sm:text-sm text-white">
                     {skill.name}
                   </span>
                 </div>

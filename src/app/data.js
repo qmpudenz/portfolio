@@ -50,6 +50,13 @@ export const testimonials = [
     name: "Jose A.",
     company: "for Doctor Nugget",
   },
+  {
+    quote:
+      "'Quinn delivered great code and I enjoyed working with him. His communication was excellent and he met all of my deadlines. I had an additional milestone for him and he hopped right on it. I will be hiring him again real soon!'",
+    image: "",
+    name: "Jenny C.",
+    company: "for Big Noise Beer",
+  },
 ];
 
 export const skills = [
