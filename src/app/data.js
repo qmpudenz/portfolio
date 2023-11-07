@@ -57,6 +57,13 @@ export const testimonials = [
     name: "Jenny C.",
     company: "for Big Noise Beer",
   },
+  {
+    quote:
+      "'The project was to make a calculator inside Zoho Commerce. Although we did not went to develop directly into Zoho, his idea and proposal went excellent in our costs and timing. Quinn delivered good work on this development project and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he was very forthcoming that the additional work was outside his area of expertise. I enjoyed working with Quinn and will likely have additional jobs for him in the future.'",
+    image: "",
+    name: "Jose A.",
+    company: "for Doctor Nugget",
+  },
 ];
 
 export const skills = [
