@@ -12,7 +12,6 @@ import Projects from "./Projects";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import React, { useEffect } from 'react';
-import Test from './new'
 
 import './globals.css'
 
