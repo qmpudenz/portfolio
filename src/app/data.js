@@ -4,7 +4,7 @@ export const projects = [
     subtitle: "Wix/Editor X Build",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./studioart.png",
+    image: "/studioart211.png",
     link: "https://studioart211.com",
   },
   {
@@ -12,7 +12,7 @@ export const projects = [
     subtitle: "Shopify Support",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./bignoisebeer.png",
+    image: "/bignoisebeer.png",
     link: "https://bignoisebeer.com",
   },
   {
@@ -20,7 +20,7 @@ export const projects = [
     subtitle: "Node.js, MySQL, eCharts, Render",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./candlestick.jpeg",
+    image: "/candlestick.jpeg",
     github: "https://github.com/yourgithub/big-noise-beer",
     link: "https://reactbootcamp.com",
   },
@@ -29,7 +29,7 @@ export const projects = [
     subtitle: "Node, JavaScript, NASA API",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "./marsweather.png",
+    image: "/marsweather.png",
     github: "https://github.com/qmpudenz/mars-weather-app",
     link: "https://qmpudenz.github.io/mars-weather-app/",
   },

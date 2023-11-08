@@ -1,215 +1,113 @@
-"use client";
-import React from "react";
-import Siema from "siema";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+
+// Projects.js
+import React, { useState } from "react";
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { CodeIcon } from "@heroicons/react/solid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { projects } from "./data.js";
 import Image from "next/image";
 
-class Projects extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      activeSlide: 0,
-    };
-  }
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
-  componentDidMount() {
-    this.siema = new Siema({
-      selector: ".siema",
-      duration: 200,
-      easing: "ease-out",
-      perPage: 1,
-      startIndex: 0,
-      draggable: true,
-      multipleDrag: true,
-      threshold: 20,
-      loop: false,
-      rtl: false,
-      onInit: () => {},
-      onChange: () => {
-        this.setState({ activeSlide: this.siema.currentSlide });
-      },
-    });
-    this.forceUpdate();
-  }
+export default function Projects() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const activeProject = projects[activeSlide]; // Get the active project based on the activeSlide state
 
-  prev() {
-    if (this.siema) {
-      this.siema.prev();
-    }
-  }
+  const [showInfo, setShowInfo] = useState(false);
 
-  next() {
-    if (this.siema) {
-      this.siema.next();
-    }
-  }
 
-  goToSlide(index) {
-    if (this.siema) {
-      this.siema.goTo(index);
-    }
-  }
-
-  renderDots() {
-    const slides = this.siema ? this.siema.innerElements : [];
     return (
-      <div className="absolute bottom-9 left-1/2 flex -translate-x-1/2 transform space-x-2 rounded bg-black/75 p-2 sm:bottom-10">
-        {slides.map((_, index) => (
-          <span
-            key={index}
-            onClick={() => this.goToSlide(index)}
-            className={`block h-4 w-4 cursor-pointer rounded-full ${
-              this.state.activeSlide === index ? "bg-blue-500" : "bg-gray-400"
-            }`}
-          ></span>
-        ))}
-      </div>
-    );
-  }
+        <div id="portfolio" className="relative flex h-full flex-col items-center justify-center overflow-hidden">
+            {/* Project Title and Description */}
+            <div className="h-fit">
+              <div className="justify-left ml-[5%] mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
+                <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
+                <h1 className="title-font text-3xl font-medium text-black sm:text-4xl">
+                  Previous Work
+                </h1>
+              </div>
 
-  renderInfo() {
-    const activeProject = projects[this.state.activeSlide];
-    return (
-      <div
-        className="absolute bottom-[15%] left-1/2 h-auto w-[85%] -translate-x-1/2 transform rounded-xl bg-black bg-opacity-80 p-4 text-xl sm:w-[60vw]"
-        onMouseEnter={() => this.setState({ showInfo: true })}
-        onMouseLeave={() => this.setState({ showInfo: false })}
-      >
-        <h3 className="text-sm text-gray-300">{activeProject.subtitle}</h3>
-        <h2 className="text-2xl font-bold text-white">{activeProject.title}</h2>
-        <p className="py-4 text-sm text-gray-200 sm:flex">
-          {activeProject.description}
-        </p>
-        <div className="mt-4 flex space-x-4 text-sm sm:text-lg">
-          {activeProject.github && (
-            <a
-              href={activeProject.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
-            >
-              View on Github
-            </a>
-          )}
-          {activeProject.link && (
-            <a
-              href={activeProject.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded bg-green-500 px-4 py-2 text-white hover:bg-green-600"
-            >
-              View Live
-            </a>
-          )}
-        </div>
-      </div>
-    );
-  }
+              <p className="mx-auto px-5 pb-2 text-sm font-light leading-relaxed text-black custom:text-lg sm:text-xl md:px-10 lg:w-5/6 md:w-11/12">
+                From refining e-commerce websites on platforms like Shopify and
+                Editor X, to developing customized code for clients, I&apos;ve
+                delivered diverse projects both on and off Upwork, showcasing
+                adaptability and dedication.
+              </p>
+            </div>
 
-  render() {
-    const slidesCount = this.siema ? this.siema.innerElements.length : 0;
-    const isAtStart = this.state.activeSlide === 0;
-    const isAtEnd = this.state.activeSlide === slidesCount - 1;
-    return (
-      <div
-        id="portfolio"
-        className="flex-column relative h-full items-center justify-center overflow-hidden"
-      >
-        <div>
-          <div className="justify-left mb-4 ml-[5%] mt-2 flex flex-wrap">
-            <CodeIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
-            <h1 className="title-font text-4xl font-medium text-black sm:text-4xl">
-              Previous Work
-            </h1>
-          </div>
-
-          <p className="mx-auto px-5 pb-8 text-sm font-light leading-relaxed text-black sm:text-xl md:px-20 lg:w-3/4">
-            From refining e-commerce websites on platforms like Shopify and
-            Editor X, to developing customized code for clients, I&apos;ve
-            delivered diverse projects both on and off Upwork, showcasing
-            adaptability and dedication.
-          </p>
-        </div>
-        <div className="flex-column relative items-center justify-center overflow-hidden">
-          <div className="siema overflow-hidden">
-            <div className="flex w-full justify-center">
-              <Image
-                className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/studioart211(mobile).png"
-                alt="Slide 2"
-                width={1000}
-                height={500}
-                onMouseEnter={() => this.setState({ showInfo: true })}
-                onMouseLeave={() => this.setState({ showInfo: false })}
-              />
-            </div>
-            <div className="flex w-full justify-center">
-              <Image
-                className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/bignoisebeer(mobile).png"
-                alt="Slide 1"
-                width={1000} // Example width, adjust as needed
-                height={500} // Example height, adjust as needed
-                onMouseEnter={() => this.setState({ showInfo: true })}
-                onMouseLeave={() => this.setState({ showInfo: false })}
-              />
-            </div>
-            <div className="flex w-full justify-center">
-              <Image
-                className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/candlestick(close).png"
-                alt="Slide 3"
-                width={1000}
-                height={500}
-                onMouseEnter={() => this.setState({ showInfo: true })}
-                onMouseLeave={() => this.setState({ showInfo: false })}
-              />
-            </div>
-            <div className="flex w-full justify-center">
-              <Image
-                className="w-[90%] rounded-xl sm:w-[65%]"
-                src="/marsweather(mobile).png"
-                alt="Slide 4"
-                width={1000}
-                height={500}
-                onMouseEnter={() => this.setState({ showInfo: true })}
-                onMouseLeave={() => this.setState({ showInfo: false })}
-              />
-            </div>
-            {/* Add as many slides as you need */}
-          </div>
-        </div>
-        <button
-          onClick={isAtStart ? null : this.prev.bind(this)}
-          className={`absolute bottom-0 left-[15%] -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl text-white md:text-8xl ${
-            isAtStart
-              ? "cursor-not-allowed text-gray-400"
-              : "hover:text-red text-black active:text-black"
-          }`}
-        >
-          <FontAwesomeIcon icon={faChevronLeft} />
-        </button>
-        <button
-          onClick={isAtEnd ? null : this.next.bind(this)}
-          className={`absolute bottom-0 right-[15%] -translate-y-1/2 transform rounded bg-black/75 p-2 text-3xl text-white md:text-8xl ${
-            isAtEnd
-              ? "cursor-not-allowed text-gray-400"
-              : "hover:text-red text-black active:text-black"
-          }`}
-        >
-          <FontAwesomeIcon icon={faChevronRight} />
-        </button>
-        {this.state.showInfo && this.renderInfo()}
-        {this.renderDots()}
-      </div>
-    );
-  }
-}
-
-export default Projects;
+            {/* Swiper */}
+            <Swiper
+                // Swiper parameters
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={50}
+                slidesPerView={1}
+                navigation
+                scrollbar={{ draggable: true }}
+                onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
+                breakpoints={{
+                    640: {
+                        slidesPerView: 1,
+                    },
+                    768: {
+                        slidesPerView: 1,
+                    },
+                    // Add more breakpoints if needed
+                }}
+                className="w-full px-[10%] h-full"
+                >
+                  {projects.map((project, index) => (
+                    <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+                      {/* Image Container */}
+                      <div className="flex-0 justify-center h-auto w-full md:w-[615px]">
+                        <Image
+                          className="rounded-xl"
+                          src={project.image}
+                          alt={project.title}
+                          width={500} // Adjust according to your design
+                          height={300} // Adjust according to your design
+                          layout="responsive" // This will make the image responsive
+                        />
+                      </div>
+                      {/* Project Info */}
+                      <div className="flex-0 p-4 h-fit md:mx-10 md:w-[615px]">
+                        <h3 className="text-lg text-gray-600">{project.subtitle}</h3>
+                        <h2 className="text-2xl font-bold text-black">{project.title}</h2>
+                        <p className="mt-2 text-sm md:text-md text-gray-800">
+                          {project.description}
+                        </p>
+                        <div className="mt-4 flex flex-wrap space-x-4">
+                          {project.github && (
+                            <a
+                              href={project.github}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600"
+                            >
+                              View on Github
+                            </a>
+                          )}
+                          {project.link && (
+                            <a
+                              href={project.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="rounded bg-green-500 px-4 py-2 text-white hover:bg-green-600"
+                            >
+                              View Live
+                            </a>
+                          )}
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+            );
+          }
