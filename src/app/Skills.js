@@ -27,27 +27,40 @@ export default function Skills() {
   }
 
   useLayoutEffect(() => {
-    const filteredSkills = skills.filter(
-      (skill) => activeFilter === "all" || skill.category === activeFilter,
-    );
+    function handleResize() {
+      const screenWidth = window.innerWidth;
+      let perPage;
+      if (screenWidth < 640) {
+        perPage = 1;
+      } else if (screenWidth >= 640 && screenWidth < 768) {
+        perPage = 2;
+      } else if (screenWidth >= 768) {
+        perPage = 4;
+      }
 
-    const itemsPerPage = Math.min(filteredSkills.length, 3);
+      if (siemaRef.current) {
+        siemaRef.current.destroy(true);
+      }
 
-    if (siemaRef.current) {
-      siemaRef.current.destroy(true);
+      siemaRef.current = new Siema({
+        selector: ".skills-slider",
+        perPage: perPage,
+        loop: false,
+        onChange: function () {
+          setCurrentSlide(this.currentSlide);
+        },
+      });
     }
 
-    siemaRef.current = new Siema({
-      selector: ".skills-slider",
-      perPage: itemsPerPage,
-      loop: false,
-      onChange: function () {
-        // Use Siema's onChange callback to update the current slide
-        setCurrentSlide(this.currentSlide);
-      },
-    });
+    // Initial setup
+    handleResize();
 
+    // Add event listener
+    window.addEventListener("resize", handleResize);
+
+    // Remove event listener on cleanup
     return () => {
+      window.removeEventListener("resize", handleResize);
       if (siemaRef.current) {
         siemaRef.current.destroy(true);
       }
@@ -71,17 +84,17 @@ export default function Skills() {
     >
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5">
         <div className="mb-10 flex flex-col justify-center text-center">
-          <div className="justify-left mb-4 mt-2 flex flex-wrap">
-            <ChipIcon className="mr-[2.5%] inline-block w-[10%] text-black" />
+          <div className="justify-left flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
+            <ChipIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
             <h1 className="title-font hidden text-3xl font-medium text-black sm:flex sm:text-4xl">
               Skills &amp; Technologies
             </h1>
-            <h1 className="display title-font text-4xl font-medium text-black sm:hidden sm:text-4xl">
+            <h1 className="display title-font text-3xl font-medium text-black sm:hidden sm:text-4xl">
               Skills &amp; Tech
             </h1>
           </div>
 
-          <p className="sm:text-md mx-auto text-left text-[2.25vh] text-sm font-light leading-relaxed text-black lg:w-3/4 xl:w-[60vw] xl:text-2xl">
+          <p className="text-md mx-auto py-5 text-left indent-0 font-light leading-relaxed text-black sm:indent-8 sm:text-xl md:px-5 lg:text-2xl custom:indent-5 custom:text-lg">
             Skilled in leveraging tools like Node and React, my experience spans
             from creating bespoke projects like a Mars Weather app (using
             NASA&apos;s JSON data) to crafting unique designs on Editor X for an
@@ -90,7 +103,7 @@ export default function Skills() {
             dedication.
           </p>
         </div>
-        <div className="filters flex justify-evenly sm:w-1/2">
+        <div className="filters relative left-1/4 flex justify-evenly sm:w-1/2">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -112,26 +125,31 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className="skills-slider mt-2 flex-wrap" key={activeFilter}>
-          {skills
-            .filter(
-              (skill) =>
-                activeFilter === "all" || skill.category === activeFilter,
-            )
-            .map((skill) => (
-              <div key={skill.name} className="p-2">
-                <div
-                  className={`flex h-full flex-col items-center rounded p-4 ${
-                    categoryColors[skill.category] || "bg-gray-800"
-                  }`}
-                >
-                  <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-white" />
-                  <span className="title-font font-sm sm:font-md max-sm:text-sm text-white">
-                    {skill.name}
-                  </span>
+        <div className=" grid grid-rows-2">
+          <div
+            className="skills-slider mt-2 grid grid-cols-1 flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4"
+            key={activeFilter}
+          >
+            {skills
+              .filter(
+                (skill) =>
+                  activeFilter === "all" || skill.category === activeFilter,
+              )
+              .map((skill) => (
+                <div key={skill.name} className="p-2">
+                  <div
+                    className={`flex h-full flex-col items-center rounded p-4 ${
+                      categoryColors[skill.category] || "bg-gray-800"
+                    }`}
+                  >
+                    <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-white" />
+                    <span className="title-font font-sm sm:font-md max-sm:text-sm text-white">
+                      {skill.name}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+          </div>
         </div>
 
         {/* Navigation Arrows */}
