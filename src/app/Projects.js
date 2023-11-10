@@ -9,6 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { projects } from "./data.js";
 import Image from "next/image";
+import { Merriweather_Sans } from "next/font/google";
+
+const meriweatherSans = Merriweather_Sans({
+  display: "swap",
+  weight: "400",
+  subsets: ["latin"],
+  style: "italic",
+});
 
 // Import Swiper styles
 import 'swiper/css';
@@ -31,9 +39,12 @@ export default function Projects() {
             <div className="h-fit">
               <div className="justify-left mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
                 <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px]" />
-                <h1 className="title-font text-3xl text-black sm:text-5xl">
-                  Previous Work
-                </h1>
+                <div className={`${meriweatherSans.className} text-3xl text-black sm:text-5xl`}>
+                  <h1 className='title-font text-black'>
+                    Previous Work
+                  </h1>
+                </div>
+
               </div>
 
               <p className="hidden mx-auto px-5 pb-2 text-sm font-light leading-relaxed text-black custom:text-lg sm:text-xl md:px-10 lg:w-5/6 md:w-11/12">

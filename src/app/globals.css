@@ -78,7 +78,7 @@ body {
   width: 100%;
 }
 
-.swiper-wrapper {
+div#portfolio > .swiper > .swiper-wrapper {
   align-items: center;
 }
 

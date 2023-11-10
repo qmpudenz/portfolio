@@ -4,6 +4,14 @@ import { BadgeCheckIcon, ChipIcon } from "@heroicons/react/solid";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import Siema from "siema";
 import { skills } from "./data";
+import { Merriweather_Sans } from "next/font/google";
+
+const meriweatherSans = Merriweather_Sans({
+  display: "swap",
+  weight: "400",
+  subsets: ["latin"],
+  style: "italic",
+});
 
 export default function Skills() {
   const categoryColors = {
@@ -86,10 +94,11 @@ export default function Skills() {
         <div className="mb-10 flex flex-col justify-center text-center">
           <div className="justify-left flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
             <ChipIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
-            <h1 className="title-font hidden text-3xl font-medium text-black sm:flex sm:text-4xl">
+            <h1 className={`${meriweatherSans.className} hidden sm:flex text-3xl text-black sm:text-5xl`}>
               Skills &amp; Technologies
             </h1>
-            <h1 className="display title-font text-3xl font-medium text-black sm:hidden sm:text-4xl">
+
+            <h1 className={`${meriweatherSans.className} text-3xl text-black sm:hidden`}>
               Skills &amp; Tech
             </h1>
           </div>
