@@ -78,3 +78,21 @@ body {
   width: 100%;
 }
 
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  align-items: center;
+  height: auto !important;
+}
+
+@media screen and (max-width: 639px) {
+  div#portfolio > .swiper > .swiper-wrapper {
+    justify-content: space-evenly;
+  }
+  
+  .swiper-slide {
+    margin-top: 0 !important;
+  }
+}

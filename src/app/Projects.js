@@ -2,7 +2,7 @@
 // Projects.js
 import React, { useState } from "react";
 // import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, Grid } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { CodeIcon } from "@heroicons/react/solid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,6 +16,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
+import 'swiper/css/grid'; // Import Swiper grid styles
+
 export default function Projects() {
   const [activeSlide, setActiveSlide] = useState(0);
   const activeProject = projects[activeSlide]; // Get the active project based on the activeSlide state
@@ -24,17 +26,17 @@ export default function Projects() {
 
 
     return (
-        <div id="portfolio" className="relative flex h-full flex-col items-center justify-center overflow-hidden">
+      <div id="portfolio" className="relative flex h-full flex-col items-center justify-center overflow-hidden">
             {/* Project Title and Description */}
             <div className="h-fit">
-              <div className="justify-left ml-[5%] mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
-                <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
-                <h1 className="title-font text-3xl font-medium text-black sm:text-4xl">
+              <div className="justify-left mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
+                <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px]" />
+                <h1 className="title-font text-3xl text-black sm:text-5xl">
                   Previous Work
                 </h1>
               </div>
 
-              <p className="mx-auto px-5 pb-2 text-sm font-light leading-relaxed text-black custom:text-lg sm:text-xl md:px-10 lg:w-5/6 md:w-11/12">
+              <p className="hidden mx-auto px-5 pb-2 text-sm font-light leading-relaxed text-black custom:text-lg sm:text-xl md:px-10 lg:w-5/6 md:w-11/12">
                 From refining e-commerce websites on platforms like Shopify and
                 Editor X, to developing customized code for clients, I&apos;ve
                 delivered diverse projects both on and off Upwork, showcasing
@@ -44,30 +46,38 @@ export default function Projects() {
 
             {/* Swiper */}
             <Swiper
-                // Swiper parameters
-                modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                scrollbar={{ draggable: true }}
-                onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
-                breakpoints={{
-                    640: {
-                        slidesPerView: 1,
-                    },
-                    768: {
-                        slidesPerView: 1,
-                    },
+        modules={[Navigation, Pagination, Scrollbar, A11y, Grid]}
+        spaceBetween={50}
+        slidesPerView={1}
+        grid={{
+          rows: 2, // Default layout with 1 row
+        }}
+        navigation
+        scrollbar={{ draggable: true }}
+        onSlideChange={(swiper) => setActiveSlide(swiper.realIndex)}
+        breakpoints={{
+          350: {
+            slidesPerView: 1,
+            grid: {
+              rows: 2, // On smaller screens, display 2 rows
+            },
+          },
+          640: {
+            slidesPerView: 1,
+            grid: {
+              rows: 1, // Revert to single row for larger screens
+            },
+          },
                     // Add more breakpoints if needed
                 }}
-                className="w-full px-[10%] h-full"
+                className="w-full px-[10%] h-full projects-slider"
                 >
                   {projects.map((project, index) => (
-                    <SwiperSlide key={index} className="flex flex-col items-center justify-center">
+                    <SwiperSlide key={index} className=" flex flex-col items-center h-fit shadow-[0_35px_15px_-25px_rgba(0,0,0,0.7)] rounded-xl justify-center">
                       {/* Image Container */}
-                      <div className="flex-0 justify-center h-auto w-full md:w-[615px]">
+                      <div className="flex-0 justify-center h-auto w-full ">
                         <Image
-                          className="rounded-xl"
+                          className="rounded-t-xl"
                           src={project.image}
                           alt={project.title}
                           width={500} // Adjust according to your design
@@ -76,13 +86,17 @@ export default function Projects() {
                         />
                       </div>
                       {/* Project Info */}
-                      <div className="flex-0 p-4 h-fit md:mx-10 md:w-[615px]">
-                        <h3 className="text-lg text-gray-600">{project.subtitle}</h3>
-                        <h2 className="text-2xl font-bold text-black">{project.title}</h2>
-                        <p className="mt-2 text-sm md:text-md text-gray-800">
+                      <div className="flex-0 p-4 h-fit md:mx-10 flex justify-between flex-row w-full rounded-b-xl bg-black/90">
+                        <div>
+                        <h3 className="text-lg text-white">{project.subtitle}</h3>
+                        <h2 className="text-2xl font-bold text-white">{project.title}</h2>
+                        </div>
+                        
+                        <p className=" text-sm hidden text-gray-800">
                           {project.description}
                         </p>
-                        <div className="mt-4 flex flex-wrap space-x-4">
+                        <p className="custom:hidden sm:hidden hidden justify-center">Click here to learn more</p>
+                        <div className="items-center flex flex-wrap space-x-4">
                           {project.github && (
                             <a
                               href={project.github}

@@ -103,7 +103,7 @@ export default function Skills() {
             dedication.
           </p>
         </div>
-        <div className="filters relative left-1/4 flex justify-evenly sm:w-1/2">
+        <div className="filters relative flex justify-center">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -112,7 +112,7 @@ export default function Skills() {
                 setCurrentSlide(0); // Reset the slide index to 0
                 siemaRef.current.goTo(0); // Ensure Siema also begins at the start
               }}
-              className={`filter-button transform rounded-md px-3 py-2 transition-transform hover:-translate-y-0.5 ${
+              className={`filter-button transform mx-1 rounded-md px-3 py-2 transition-transform hover:-translate-y-0.5 ${
                 activeFilter === filter ? "border-b-2 border-blue-800" : ""
               } ${categoryColors[filter] || "bg-gray-600"} hover:${
                 categoryColors[filter]
