@@ -1,7 +1,7 @@
 import { ArrowRightIcon } from "@heroicons/react/solid";
 import React, { useState } from "react";
 
-import { Caprasimo } from "next/font/google";
+import { Inter_Tight, Agbalumo, Merriweather_Sans } from "next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -9,10 +9,23 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-const caprasimo = Caprasimo({
+const inter = Inter_Tight({
+  display: "swap",
+  weight: "variable",
+  subsets: ["latin"],
+});
+
+const merriweatherSans = Merriweather_Sans({
   display: "swap",
   weight: "400",
   subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
+const agbalumo = Agbalumo({
+  display: "swap",
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export default function Navbar() {
@@ -22,7 +35,7 @@ export default function Navbar() {
     <header className="static top-0 z-10 bg-white text-black md:sticky">
       <div className="container mx-auto flex flex-row flex-wrap items-center justify-between px-[5%] py-4 md:flex-row">
         {/* Name OR Links */}
-        <div className={`${caprasimo.className} flex-grow`}>
+        <div className={`${merriweatherSans.className} flex-grow`}>
           {isMobileMenuOpen ? (
             <nav className="flex-wrap items-center justify-start py-1 text-black md:mr-auto md:border-l md:border-gray-700 md:py-1 md:pl-4">
               <a href="#portfolio" className="mr-5 hover:text-white">
@@ -36,10 +49,12 @@ export default function Navbar() {
               </a>
             </nav>
           ) : (
-            <div className="title-font font-medium text-black md:mb-0">
-              <a href="#about" className="text-2xl">
+            
+            <div className={`${agbalumo.className} title-font font-light text-2xl items-center flex text-black md:mb-0`}>
+              <a href="#about" className="text-2xl pr-5 font-medium">
                 Quinn Pudenz
               </a>
+              <a className={`${merriweatherSans.className} hidden sm:flex custom:flex pl-5 border-l-2 text-xl border-black`}>Freelance Developer</a> 
             </div>
           )}
         </div>

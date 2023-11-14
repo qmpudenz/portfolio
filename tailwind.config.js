@@ -13,7 +13,6 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Caprasimo: ["Caprasimo", "sans-serif"],
         Montserrat: ["Montserrat", "sans-serif"],
       },
       screens: {

@@ -96,3 +96,7 @@ div#portfolio > .swiper > .swiper-wrapper {
     margin-top: 0 !important;
   }
 }
+
+.clampOne {
+  font-size: clamp(12px, 2vh, 20px); /* Minimum 12px, maximum 20px, otherwise 2% of viewport height */
+}

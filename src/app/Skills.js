@@ -6,7 +6,7 @@ import Siema from "siema";
 import { skills } from "./data";
 import { Merriweather_Sans } from "next/font/google";
 
-const meriweatherSans = Merriweather_Sans({
+const merriweatherSans = Merriweather_Sans({
   display: "swap",
   weight: "400",
   subsets: ["latin"],
@@ -94,11 +94,11 @@ export default function Skills() {
         <div className="mb-10 flex flex-col justify-center text-center">
           <div className="justify-left flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
             <ChipIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
-            <h1 className={`${meriweatherSans.className} hidden sm:flex text-3xl text-black sm:text-5xl`}>
+            <h1 className={`${merriweatherSans.className} hidden sm:flex text-3xl text-black sm:text-5xl`}>
               Skills &amp; Technologies
             </h1>
 
-            <h1 className={`${meriweatherSans.className} text-3xl text-black sm:hidden`}>
+            <h1 className={`${merriweatherSans.className} text-3xl text-black sm:hidden`}>
               Skills &amp; Tech
             </h1>
           </div>

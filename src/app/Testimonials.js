@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { Merriweather_Sans } from "next/font/google";
 
-const meriweatherSans = Merriweather_Sans({
+const merriweatherSans = Merriweather_Sans({
   display: "swap",
   weight: "400",
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function Testimonials() {
     <div className="h-auto">
     <div className="justify-left  mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
         <UsersIcon className="mr-3 inline-block w-[40px] text-xl text-black sm:w-[50px] lg:w-[60px]" />
-        <h1 className={`${meriweatherSans.className} text-3xl text-black sm:text-5xl`}>
+        <h1 className={`${merriweatherSans.className} text-3xl text-black sm:text-5xl`}>
           Client Testimonials
         </h1>
       </div>
