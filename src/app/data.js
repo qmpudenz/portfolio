@@ -15,15 +15,15 @@ export const projects = [
     image: "/bnb.png",
     link: "https://bignoisebeer.com",
   },
-  {
-    title: "Candlestick Chart",
-    subtitle: "Node.js, MySQL, eCharts, Render",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "/candlestick.jpeg",
-    github: "https://github.com/yourgithub/big-noise-beer",
-    link: "https://reactbootcamp.com",
-  },
+  // {
+  //   title: "Candlestick Chart",
+  //   subtitle: "Node.js, MySQL, eCharts, Render",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+  //   image: "/candlestick.jpeg",
+  //   github: "https://github.com/yourgithub/big-noise-beer",
+  //   link: "https://reactbootcamp.com",
+  // },
   {
     title: "Mars Weather App",
     subtitle: "Node, JavaScript, NASA API",

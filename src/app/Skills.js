@@ -134,7 +134,7 @@ export default function Skills() {
           ))}
         </div>
 
-        <div className=" grid grid-rows-2">
+        <div className="grid">
           <div
             className="skills-slider mt-2 grid grid-cols-1 flex-wrap gap-4 md:grid-cols-2 lg:grid-cols-4"
             key={activeFilter}
