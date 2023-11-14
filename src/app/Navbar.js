@@ -33,7 +33,7 @@ export default function Navbar() {
 
   return (
     <header className="static top-0 z-10  text-black md:sticky">
-      <div className="container mx-auto flex flex-row flex-wrap items-center justify-between px-[5%] py-4 md:flex-row">
+      <div className="container mx-auto flex flex-row flex-wrap items-center justify-between px-[5%] md:flex-row">
         {/* Name OR Links */}
         <div className={`${merriweatherSans.className} flex-grow`}>
           {isMobileMenuOpen ? (

@@ -33,7 +33,7 @@ export default function Home() {
 
   return (
     <div className="h-full bg-[url('/topography.webp')] bg-opacity-[10%]">
-      <div className="h-[8dvh]">
+      <div className="h-[8dvh] flex flex-col justify-center">
       <Navbar />
         </div>
 
