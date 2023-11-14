@@ -32,12 +32,12 @@ export default function Home() {
   // }, []);
 
   return (
-    <div className="h-full">
-      <div>
+    <div className="h-full bg-[url('/topography.webp')] bg-opacity-[10%]">
+      <div className="h-[8vh]">
       <Navbar />
         </div>
 
-      <div className="scroll-container vh90"> 
+      <div className="scroll-container h-[92vh]"> 
         <div className="module "><About /></div>
         <div className="module"><Projects /></div>
         <div className="module"><Skills /></div> 

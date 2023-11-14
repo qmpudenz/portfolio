@@ -88,7 +88,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="max-sm:items-baseline flex h-full flex-wrap items-center justify-center bg-white sm:items-baseline md:items-center"
+      className="max-sm:items-baseline flex h-full flex-wrap items-center justify-center  sm:items-baseline md:items-center"
     >
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5">
         <div className="mb-10 flex flex-col justify-center text-center">

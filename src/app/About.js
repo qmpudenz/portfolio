@@ -29,18 +29,18 @@ const meriweatherSans = Merriweather_Sans({
 
 export default function About() {
   return (
-    <main className="h-full">
-      <section id="about" className="flex h-full flex-col items-center">
-        <div className="py-auto align-center container mx-5 flex h-[97.5%] w-auto flex-col items-center justify-center rounded-tl-[45px] rounded-br-[45px] bg-gradient-to-r from-red-500 to-rose-500 px-8 sm:px-10 sm:pb-2 md:mx-10 md:flex-row md:px-10">
+    <main className="h-full ">
+      <section id="about" className=" flex h-full flex-col items-center">
+        <div className=" py-auto align-center container mx-5 flex h-[97.5%] w-auto flex-col items-center justify-center rounded-tl-[45px] rounded-br-[45px] bg-gradient-to-r from-red-500 to-rose-500 px-4 sm:px-10 sm:pb-2 md:mx-10 md:flex-row md:px-2 border-rose-600 border-8">
           <div className=" flex h-[95%] flex-col items-center justify-evenly text-left md:items-center">
             <div className="align-center flex h-1/2 flex-col justify-evenly sm:h-auto sm:flex-row">
       
-              <h1 className={`${agbalumo.className} title-font mw-auto flex items-center text-center text-4xl custom:text-5xl font-medium text-white sm:w-[60%] sm:max-w-[60%] sm:text-6xl md:w-full md:max-w-full md:text-[5.25rem] lg:text-8xl lg:px-10 xl:text-9xl`}>
+              <h1 className={`${agbalumo.className} title-font mw-auto flex items-center text-center text-4xl custom:text-5xl custom:mx-2 font-medium text-white sm:w-[60%] sm:max-w-[60%] sm:text-6xl md:w-full md:max-w-full md:text-[5.25rem] lg:text-8xl lg:px-10 xl:text-8xl xl:px-[12%]`}>
                 Let&apos;s bring your ideas to life.
               </h1>
 
               <div className="flex items-center justify-center md:hidden">
-                <div className="w-[25vh] md:hidden">
+                <div className="w-[25vh] flex justify-center md:hidden">
                   <Image
                     className="max-sm:display rounded object-cover object-center md:hidden"
                     alt="hero"
@@ -52,14 +52,14 @@ export default function About() {
               </div>
             </div>
 
-            <div className="flex h-1/2 flex-row justify-evenly sm:h-auto">
-              <div className="flex flex-col justify-center md:w-[60%] bg-white rounded-tr-3xl rounded-bl-3xl px-[5%] py-2 custom:py-2 sm:py-5 xl:py-0 my-2 xl:my-1">
-              <p className={`${meriweatherSans.className} clampOne custom:text-xl mb-2 text-black font-light text-md leading-relaxed  sm:mb-3 sm:text-2xl lg:text-2xl xl:text-2xl`}>
+            <div className="flex h-1/2 flex-row justify-evenly sm:h-auto items-center">
+              <div className="flex flex-col justify-center md:w-[60%] bg-white rounded-tr-3xl h-fit rounded-bl-3xl px-[5%] py-2 custom:py-2 sm:py-5 my-2 xl:py-5 border-orange-500 border-8">
+              <p className={`${meriweatherSans.className} clampOne custom:text-lg mb-2 text-black font-light text-md leading-relaxed  sm:mb-3 sm:text-xl md:text-xl lg:text-xl xl:text-2xl`}>
                   Hi! I&apos;m a freelance developer based out of Kansas City,
                   passionate about building beautiful, functional websites and
                   applications.
                 </p>
-                <p className={`${meriweatherSans.className} clampOne md:text-md custom:text-xl mt-2 sm:mt-3 italic text-md font-light leading-relaxed text-black sm:text-2xl lg:text-2xl xl:text-2xl`}>
+                <p className={`${meriweatherSans.className} clampOne md:text-md custom:text-lg mt-2 sm:mt-3 italic text-md font-light leading-relaxed text-black sm:text-xl md:text-xl lg:text-xl xl:text-2xl`}>
                   I specialize in React, Next.js, and Node.js, but I&apos;m
                   always learning new technologies and frameworks.
                 </p>
@@ -80,13 +80,13 @@ export default function About() {
               <div className="flex justify-center">
                 <a
                   href="#contact"
-                  className=" text-md hidden rounded border-0 bg-white px-6 py-2 text-black hover:bg-sky-400 focus:outline-none sm:inline-flex  md:text-lg xl:text-2xl"
+                  className=" text-md hidden rounded border-0 bg-white px-6 py-2 text-black hover:bg-sky-400 focus:outline-none custom:inline-flex sm:inline-flex  md:text-lg xl:text-2xl"
                 >
                   Reach Out
                 </a>
                 <a
                   href="#projects"
-                  className="text-md ml-4 hidden rounded border-0 bg-black px-6 py-2 text-white hover:bg-neutral-700 focus:outline-none  sm:inline-flex md:text-lg xl:text-2xl"
+                  className="text-md ml-4 hidden rounded border-0 bg-black px-6 py-2 text-white hover:bg-neutral-700 focus:outline-none custom:inline-flex  sm:inline-flex md:text-lg xl:text-2xl"
                 >
                   See My Past Work
                 </a>

@@ -28,7 +28,7 @@ import './globals.css';
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="flex h-full flex-col items-center justify-center bg-white">
+        <section id="testimonials" className="flex h-full flex-col items-center justify-center ">
          <div className="">
     <div className="h-auto">
     <div className="justify-left  mt-2 flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
