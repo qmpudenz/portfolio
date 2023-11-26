@@ -81,7 +81,7 @@ export default function Testimonials() {
                   <TerminalIcon className="block w-8 text-white" />
                 </div>
                 <div>
-                  <p className="mb-2 h-auto max-h-[50vh] overflow-scroll text-left text-lg font-light leading-relaxed">
+                  <p className="mb-2 h-auto max-h-[50vh] overflow-scroll text-left text-lg font-light leading-relaxed text-white">
                     {testimonial.quote}
                   </p>
                 </div>

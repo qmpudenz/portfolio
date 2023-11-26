@@ -152,7 +152,7 @@ export default function Skills() {
                 <div key={skill.name} className="p-2">
                   <div
                     className={`flex h-full flex-col items-center rounded p-4 ${
-                      categoryColors[skill.category] || "bg-gray-800"
+                      categoryColors[skill.category] || "bg-gray-800 text-white"
                     }`}
                   >
                     <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-white" />
