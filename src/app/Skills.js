@@ -151,8 +151,8 @@ export default function Skills() {
               .map((skill) => (
                 <div key={skill.name} className="p-2">
                   <div
-                    className={`flex h-full flex-col items-center rounded p-4 ${
-                      categoryColors[skill.category] || "bg-gray-800 text-white"
+                    className={`flex h-full flex-col items-center rounded p-4 text-white ${
+                      categoryColors[skill.category] || "bg-gray-800"
                     }`}
                   >
                     <BadgeCheckIcon className="h-6 w-6 flex-shrink-0 text-white" />
