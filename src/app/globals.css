@@ -77,18 +77,23 @@ div#portfolio > .swiper > .swiper-wrapper {
 .swiper-slide {
   align-items: center;
   height: auto !important;
+  margin-bottom: 2.5%;
 }
 
 @media screen and (max-width: 639px) {
   div#portfolio > .swiper > .swiper-wrapper {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
-  
+
   .swiper-slide {
     margin-top: 0 !important;
   }
 }
 
 .clampOne {
-  font-size: clamp(12px, 2vh, 20px); /* Minimum 12px, maximum 20px, otherwise 2% of viewport height */
+  font-size: clamp(
+    12px,
+    2vh,
+    20px
+  ); /* Minimum 12px, maximum 20px, otherwise 2% of viewport height */
 }

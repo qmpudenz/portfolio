@@ -25,13 +25,21 @@ export const projects = [
   //   link: "https://reactbootcamp.com",
   // },
   {
-    title: "Mars Weather App",
-    subtitle: "Node, JavaScript, NASA API",
+    title: "Mars Weather",
+    subtitle: "Node, NASA API",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
     image: "/mars.png",
     github: "https://github.com/qmpudenz/mars-weather-app",
     link: "https://qmpudenz.github.io/mars-weather-app/",
+  },
+  {
+    title: "Big Noise Beer",
+    subtitle: "Shopify Support",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    image: "/bnb.png",
+    link: "https://bignoisebeer.com",
   },
 ];
 

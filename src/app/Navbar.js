@@ -49,12 +49,17 @@ export default function Navbar() {
               </a>
             </nav>
           ) : (
-            
-            <div className={`${agbalumo.className} title-font font-light text-2xl items-center flex text-black md:mb-0`}>
-              <a href="#about" className="text-2xl pr-5 font-medium">
+            <div
+              className={`${agbalumo.className} title-font flex items-end text-2xl font-light text-black md:mb-0`}
+            >
+              <a href="#about" className="pr-5 text-2xl font-medium">
                 Quinn Pudenz
               </a>
-              <a className={`${merriweatherSans.className} hidden sm:flex custom:flex pl-5 border-l-2 text-xl border-black`}>Freelance Developer</a> 
+              <a
+                className={`${merriweatherSans.className} hidden border-l-2 border-black pl-5 text-xl sm:flex custom:flex`}
+              >
+                Freelance Developer
+              </a>
             </div>
           )}
         </div>

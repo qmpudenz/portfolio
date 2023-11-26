@@ -92,13 +92,17 @@ export default function Skills() {
     >
       <div className="container mx-auto flex h-full flex-col justify-between rounded-[45px] bg-transparent px-5 pb-5">
         <div className="mb-10 flex flex-col justify-center text-center">
-          <div className="justify-left flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
+          <div className="flex flex-wrap justify-center sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
             <ChipIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
-            <h1 className={`${merriweatherSans.className} hidden sm:flex text-3xl text-black sm:text-5xl`}>
+            <h1
+              className={`${merriweatherSans.className} hidden text-3xl text-black sm:flex sm:text-5xl`}
+            >
               Skills &amp; Technologies
             </h1>
 
-            <h1 className={`${merriweatherSans.className} text-3xl text-black sm:hidden`}>
+            <h1
+              className={`${merriweatherSans.className} text-3xl text-black sm:hidden`}
+            >
               Skills &amp; Tech
             </h1>
           </div>
@@ -121,7 +125,7 @@ export default function Skills() {
                 setCurrentSlide(0); // Reset the slide index to 0
                 siemaRef.current.goTo(0); // Ensure Siema also begins at the start
               }}
-              className={`filter-button transform mx-1 rounded-md px-3 py-2 transition-transform hover:-translate-y-0.5 ${
+              className={`filter-button mx-1 transform rounded-md px-3 py-2 transition-transform hover:-translate-y-0.5 ${
                 activeFilter === filter ? "border-b-2 border-blue-800" : ""
               } ${categoryColors[filter] || "bg-gray-600"} hover:${
                 categoryColors[filter]
