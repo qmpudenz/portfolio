@@ -31,9 +31,12 @@ export default function Navbar() {
     <header className="relative top-0 z-20 text-black md:sticky">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-[5%] md:flex-row">
         {/* Toggle Between Logo/Name and Mobile Menu */}
+
         {isMobileMenuOpen ? (
-          <nav className="flex flex-grow text-xl underline-offset-4">
-            <a href="#portfolio" className="block p-2 hover:underline">
+          <nav
+            className={`${merriweatherSans.className} flex flex-grow text-xl underline-offset-4`}
+          >
+            <a href="#portfolio" className="block p-2 pl-0 hover:underline">
               Portfolio
             </a>
             <a href="#skills" className="block p-2 hover:underline">
@@ -61,14 +64,16 @@ export default function Navbar() {
         )}
 
         {/* Mobile Menu Icon */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <a href="#" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
             <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
           </a>
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden text-xl underline-offset-4 md:flex md:items-center md:justify-end">
+        <nav
+          className={`${merriweatherSans.className} hidden text-xl underline-offset-4 md:justify-end md:self-end lg:flex`}
+        >
           <a href="#portfolio" className="mr-5 hover:underline">
             Portfolio
           </a>
