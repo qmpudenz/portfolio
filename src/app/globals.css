@@ -97,3 +97,53 @@ div#portfolio > .swiper > .swiper-wrapper {
     20px
   ); /* Minimum 12px, maximum 20px, otherwise 2% of viewport height */
 }
+
+.image-container {
+  /* Adjust size and position as needed to fit your layout */
+  width: 250px;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .eye {
+    /* Adjust width and height as needed */
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .pupil {
+    width: 10px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .eye {
+    /* Adjust width and height as needed */
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .pupil {
+    width: 8px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+}
