@@ -42,7 +42,7 @@ export default function Projects() {
       {/* Project Title and Description */}
       <div className="h-fit">
         <div className="justify-left flex flex-wrap sm:ml-0 sm:items-center sm:justify-center custom:ml-0 custom:items-center custom:justify-center">
-          <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px]" />
+          <CodeIcon className="mr-3 inline-block w-[40px] text-black sm:w-[50px] lg:w-[60px]" />
           <div
             className={`${merriweatherSans.className} text-3xl text-black sm:text-5xl`}
           >
