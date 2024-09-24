@@ -9,6 +9,7 @@ import Skills from "./Skills";
 import Testimonials from "./Testimonials";
 import Contact from "./Contact";
 import Projects from "./Projects";
+import Shopify from "./Shopify";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css"; 
 import React, { useEffect } from 'react';
@@ -39,10 +40,7 @@ export default function Home() {
 
       <div className="scroll-container h-[92dvh]"> 
         <div className="module "><About /></div>
-        <div className="module"><Projects /></div>
-        <div className="module"><Skills /></div> 
-        <div className="module"><Testimonials /></div>
-
+        <div className="module"><Skills /></div>
       </div>
     </div>
   )

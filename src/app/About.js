@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { Flip } from "gsap/Flip";
+gsap.registerPlugin(Flip);
 
 import {
   Montserrat,
