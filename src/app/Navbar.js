@@ -27,71 +27,113 @@ const agbalumo = Agbalumo({
 export default function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  return (
-    <header className="relative top-0 z-20 text-black md:sticky">
-      <div className="container mx-auto flex flex-wrap items-center justify-between px-[5%] md:flex-row">
-        {/* Toggle Between Logo/Name and Mobile Menu */}
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setMobileMenuOpen(false);
+  };
 
-        {isMobileMenuOpen ? (
-          <nav
-            className={`${merriweatherSans.className} flex flex-grow text-xl underline-offset-4`}
-          >
-            <a href="#portfolio" className="block p-2 pl-0 hover:underline">
-              Portfolio
-            </a>
-            <a href="#skills" className="block p-2 hover:underline">
-              Skills
-            </a>
-            <a href="#testimonials" className="block p-2 hover:underline">
-              Testimonials
-            </a>
-          </nav>
-        ) : (
-          <div className={`${merriweatherSans.className} flex-grow`}>
-            <div
-              className={`${agbalumo.className} title-font flex items-end text-2xl font-light text-black md:mb-0`}
+  return (
+    <header className="w-full py-4">
+      <div className="container mx-auto flex flex-wrap items-center justify-between px-6 md:flex-row">
+        {/* Logo/Name */}
+        <div className={`${merriweatherSans.className} flex-grow`}>
+          <div className={`${agbalumo.className} title-font flex items-center text-2xl font-light text-slate-900`}>
+            <button 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="pr-5 text-2xl font-medium hover:text-blue-600 transition-colors"
             >
-              <a href="#about" className="pr-5 text-2xl font-medium">
-                Quinn Pudenz
-              </a>
-              <a
-                className={`${merriweatherSans.className} hidden border-l-2 border-black pl-5 text-xl sm:flex custom:flex`}
-              >
-                Freelance Developer
-              </a>
-            </div>
+              Portfolio
+            </button>
+            <span className={`${merriweatherSans.className} hidden border-l-2 border-slate-300 pl-5 text-lg text-slate-600 sm:flex custom:flex`}>
+              Full-Stack Developer
+            </span>
           </div>
-        )}
+        </div>
 
         {/* Mobile Menu Icon */}
         <div className="lg:hidden">
-          <a href="#" onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}>
-            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
-          </a>
+          <button 
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            className="text-slate-900 hover:text-blue-600 transition-colors"
+          >
+            <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} size="lg" />
+          </button>
         </div>
 
         {/* Desktop Menu */}
-        <nav
-          className={`${merriweatherSans.className} hidden text-xl underline-offset-4 md:justify-end md:self-end lg:flex`}
-        >
-          <a href="#portfolio" className="mr-5 hover:underline">
-            Portfolio
-          </a>
-          <a href="#skills" className="mr-5 hover:underline">
+        <nav className={`${merriweatherSans.className} hidden text-lg lg:flex items-center space-x-8`}>
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+          >
+            About
+          </button>
+          <button 
+            onClick={() => scrollToSection('skills')}
+            className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+          >
             Skills
-          </a>
-          <a href="#testimonials" className="mr-5 hover:underline">
+          </button>
+          <button 
+            onClick={() => scrollToSection('projects')}
+            className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+          >
+            Projects
+          </button>
+          <button 
+            onClick={() => scrollToSection('testimonials')}
+            className="text-slate-700 hover:text-blue-600 transition-colors font-medium"
+          >
             Testimonials
-          </a>
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 transform hover:scale-105"
+          >
+            Contact
+          </button>
         </nav>
 
-        {/* Contact Button */}
-        <a
-          href="#contact"
-          className="raise mt-4 hidden items-center rounded bg-sky-400 px-3 py-1 text-base hover:bg-sky-600"
-        >
-          Contact <ArrowRightIcon className="ml-1 h-4 w-4" />
-        </a>
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-full left-0 right-0 bg-white shadow-lg border-t lg:hidden">
+            <nav className={`${merriweatherSans.className} flex flex-col p-6 space-y-4`}>
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToSection('skills')}
+                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Skills
+              </button>
+              <button 
+                onClick={() => scrollToSection('projects')}
+                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Projects
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonials')}
+                className="text-left text-slate-700 hover:text-blue-600 transition-colors font-medium"
+              >
+                Testimonials
+              </button>
+              <button
+                onClick={() => scrollToSection('contact')}
+                className="text-left bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-3 px-6 rounded-lg mt-4 w-fit"
+              >
+                Contact
+              </button>
+            </nav>
+          </div>
+        )}
       </div>
     </header>
   );

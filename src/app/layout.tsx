@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Quinn Pudenz - Freelance Web Developer',
-  description: 'Portfolio of Quinn Pudenz, a freelance web developer based in Kansas City, MO.',
+  title: 'Professional Portfolio - Full-Stack Web Developer',
+  description: 'Portfolio showcasing web development expertise in React, Next.js, Node.js, and modern web technologies. Available for freelance projects.',
 }
 
 export default function RootLayout({
