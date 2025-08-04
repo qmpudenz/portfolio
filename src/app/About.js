@@ -136,15 +136,15 @@ export default function About() {
                 <p
                   className={`${meriweatherSans.className} clampOne text-md mb-2 font-light leading-relaxed text-black sm:mb-3  sm:text-xl md:text-xl lg:text-xl xl:text-2xl custom:text-lg`}
                 >
-                  Hi! I&apos;m a freelance developer based out of Kansas City,
-                  passionate about building beautiful, functional websites and
-                  applications.
+                  Hi! I&apos;m a full-stack web developer passionate about creating 
+                  innovative digital solutions that drive business growth and enhance 
+                  user experiences.
                 </p>
                 <p
                   className={`${meriweatherSans.className} clampOne md:text-md text-md mt-2 font-light italic leading-relaxed text-black sm:mt-3 sm:text-xl md:text-xl lg:text-xl xl:text-2xl custom:text-lg`}
                 >
-                  I specialize in React, Next.js, and Node.js, but I&apos;m
-                  always learning new technologies and frameworks.
+                  With expertise in React, Next.js, Node.js, and modern web technologies, 
+                  I help businesses transform their ideas into powerful, scalable web applications.
                 </p>
               </div>
 

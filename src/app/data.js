@@ -1,45 +1,37 @@
 export const projects = [
   {
     title: "StudioArt211",
-    subtitle: "Wix/Editor X Build",
+    subtitle: "Modern Art Gallery Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A sophisticated art gallery website built with modern web technologies. Features responsive design, interactive galleries, and optimized performance for showcasing artwork portfolios.",
     image: "/s211.png",
     link: "https://studioart211.com",
   },
   {
     title: "Big Noise Beer",
-    subtitle: "Shopify Support",
+    subtitle: "E-commerce Platform",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Custom Shopify development and optimization for a craft brewery. Implemented advanced product filtering, inventory management, and seamless checkout experience to boost online sales.",
     image: "/bnb.png",
     link: "https://bignoisebeer.com",
   },
-  // {
-  //   title: "Candlestick Chart",
-  //   subtitle: "Node.js, MySQL, eCharts, Render",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-  //   image: "/candlestick.jpeg",
-  //   github: "https://github.com/yourgithub/big-noise-beer",
-  //   link: "https://reactbootcamp.com",
-  // },
   {
-    title: "Mars Weather",
-    subtitle: "Node, NASA API",
+    title: "Mars Weather App",
+    subtitle: "NASA API Integration",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "Interactive weather application displaying real-time Martian weather data using NASA's InSight API. Built with Node.js and modern JavaScript, featuring responsive design and data visualization.",
     image: "/mars.png",
     github: "https://github.com/qmpudenz/mars-weather-app",
     link: "https://qmpudenz.github.io/mars-weather-app/",
   },
   {
-    title: "Big Noise Beer",
-    subtitle: "Shopify Support",
+    title: "Financial Data Visualization",
+    subtitle: "Interactive Charts & Analytics",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "/bnb.png",
-    link: "https://bignoisebeer.com",
+      "Advanced data visualization tool for financial markets. Features real-time candlestick charts, technical indicators, and portfolio tracking with MySQL backend and responsive frontend.",
+    image: "/candlestick.jpeg",
+    github: "https://github.com/yourgithub/financial-dashboard",
+    link: "#",
   },
 ];
 
@@ -75,18 +67,32 @@ export const testimonials = [
 ];
 
 export const skills = [
-  { name: "HTML", category: "web" },
-  { name: "React", category: "web" },
+  { name: "HTML5", category: "web" },
+  { name: "CSS3", category: "web" },
   { name: "JavaScript", category: "web" },
-  { name: "CSS", category: "web" },
+  { name: "TypeScript", category: "web" },
+  { name: "React", category: "web" },
   { name: "Next.js", category: "web" },
+  { name: "Vue.js", category: "web" },
+  { name: "Tailwind CSS", category: "web" },
 
-  { name: "Editor X", category: "tools" },
+  { name: "Node.js", category: "backend" },
+  { name: "Express.js", category: "backend" },
+  { name: "Python", category: "backend" },
+  { name: "MySQL", category: "backend" },
+  { name: "MongoDB", category: "backend" },
+  { name: "PostgreSQL", category: "backend" },
+  { name: "REST APIs", category: "backend" },
+  { name: "GraphQL", category: "backend" },
+
   { name: "Shopify", category: "tools" },
   { name: "WordPress", category: "tools" },
+  { name: "Git", category: "tools" },
+  { name: "Docker", category: "tools" },
+  { name: "AWS", category: "tools" },
+  { name: "Vercel", category: "tools" },
 
   { name: "Figma", category: "design" },
-
-  { name: "Node", category: "backend" },
-  { name: "MySQL", category: "backend" },
+  { name: "Adobe Creative Suite", category: "design" },
+  { name: "UI/UX Design", category: "design" },
 ];
